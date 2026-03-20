@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&W Auto Repair LLC | Central New Jersey Auto Repair</title>
+    <meta name="description" content="B&W Auto Repair LLC - Professional auto repair and maintenance services in Central New Jersey. Call 609-529-3357. Servicio en Español disponible.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div id="lang-bar">
+        <div class="container lang-bar-inner">
+            <span id="lang-label">
+                <i class="fas fa-globe"></i>
+                <button class="lang-btn active" data-lang="en" onclick="setLang('en')">English</button> |
+                <button class="lang-btn" data-lang="es" onclick="setLang('es')">Español</button>
+            </span>
+            <span class="top-phone"><i class="fas fa-phone"></i> <a href="tel:6095293357">609-529-3357</a></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <span class="logo-bw">B&W</span>
+                <span class="logo-text">Auto Repair <small>LLC</small></span>
+            </a>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
+                <li><a href="#about" data-en="About" data-es="Nosotros">About</a></li>
+                <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
+                <li><a href="#why-us" data-en="Why Us" data-es="¿Por Qué Nosotros?">Why Us</a></li>
+                <li><a href="#reviews" data-en="Reviews" data-es="Reseñas">Reviews</a></li>
+                <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+                <li><a href="tel:6095293357" class="nav-cta"><i class="fas fa-phone"></i> 609-529-3357</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>
+                <span data-en="Your Trusted Auto Repair" data-es="Su Taller Mecánico de Confianza">Your Trusted Auto Repair</span>
+                <span class="highlight" data-en="in Central New Jersey" data-es="en el Centro de New Jersey">in Central New Jersey</span>
+            </h1>
+            <p class="hero-sub" data-en="Professional auto repair and maintenance services you can count on. Family-owned, community-driven." data-es="Servicios profesionales de reparación y mantenimiento automotriz en los que puede confiar. Negocio familiar, impulsado por la comunidad.">Professional auto repair and maintenance services you can count on. Family-owned, community-driven.</p>
+            <div class="hero-buttons">
+                <a href="tel:6095293357" class="btn btn-primary"><i class="fas fa-phone"></i> <span data-en="Call Now: 609-529-3357" data-es="Llame Ahora: 609-529-3357">Call Now: 609-529-3357</span></a>
+                <a href="#services" class="btn btn-outline"><span data-en="Our Services" data-es="Nuestros Servicios">Our Services</span></a>
+            </div>
+            <div class="hero-badges">
+                <div class="badge"><i class="fas fa-certificate"></i> <span data-en="Certified Mechanics" data-es="Mecánicos Certificados">Certified Mechanics</span></div>
+                <div class="badge"><i class="fas fa-language"></i> <span data-en="Bilingual Service" data-es="Servicio Bilingüe">Bilingual Service</span></div>
+                <div class="badge"><i class="fas fa-dollar-sign"></i> <span data-en="Fair Pricing" data-es="Precios Justos">Fair Pricing</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="About B&W Auto Repair" data-es="Sobre B&W Auto Repair">About B&W Auto Repair</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p data-en="At B&W Auto Repair LLC, we are more than just a repair shop — we are your neighbors. Located in the heart of Central New Jersey, our family-owned business has been serving the community with honest, reliable, and affordable auto repair services." data-es="En B&W Auto Repair LLC, somos más que un taller de reparación — somos sus vecinos. Ubicados en el corazón del Centro de New Jersey, nuestro negocio familiar ha estado sirviendo a la comunidad con servicios de reparación automotriz honestos, confiables y asequibles.">At B&W Auto Repair LLC, we are more than just a repair shop — we are your neighbors. Located in the heart of Central New Jersey, our family-owned business has been serving the community with honest, reliable, and affordable auto repair services.</p>
+                    <p data-en="Our team of certified mechanics brings years of experience and a genuine passion for keeping your vehicle running safely and smoothly. We treat every car as if it were our own." data-es="Nuestro equipo de mecánicos certificados aporta años de experiencia y una verdadera pasión por mantener su vehículo funcionando de manera segura y sin problemas. Tratamos cada auto como si fuera el nuestro.">Our team of certified mechanics brings years of experience and a genuine passion for keeping your vehicle running safely and smoothly. We treat every car as if it were our own.</p>
+                    <p data-en="We proudly offer bilingual service in English and Spanish to better serve our diverse community." data-es="Ofrecemos con orgullo servicio bilingüe en inglés y español para servir mejor a nuestra diversa comunidad.">We proudly offer bilingual service in English and Spanish to better serve our diverse community.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label" data-en="Customer Satisfaction" data-es="Satisfacción del Cliente">Customer Satisfaction</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label" data-en="Languages Spoken" data-es="Idiomas Hablados">Languages Spoken</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number"><i class="fas fa-star"></i></span>
+                            <span class="stat-label" data-en="Top Rated" data-es="Mejor Calificado">Top Rated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-wrapper">
+                        <i class="fas fa-tools about-icon-large"></i>
+                        <div class="about-overlay-text">
+                            <span data-en="Trusted by Families Across Central NJ" data-es="Confianza de Familias en Todo el Centro de NJ">Trusted by Families Across Central NJ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
+                <div class="divider"></div>
+                <p class="section-sub" data-en="Complete auto repair and maintenance under one roof" data-es="Reparación y mantenimiento automotriz completo bajo un mismo techo">Complete auto repair and maintenance under one roof</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-oil-can"></i></div>
+                    <h3 data-en="Oil Changes" data-es="Cambios de Aceite">Oil Changes</h3>
+                    <p data-en="Regular oil changes to keep your engine running clean and efficient. We use quality oils and filters." data-es="Cambios de aceite regulares para mantener su motor limpio y eficiente. Usamos aceites y filtros de calidad.">Regular oil changes to keep your engine running clean and efficient. We use quality oils and filters.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3 data-en="Engine Repair" data-es="Reparación de Motor">Engine Repair</h3>
+                    <p data-en="From minor tune-ups to major engine overhauls, our experienced mechanics handle it all." data-es="Desde ajustes menores hasta reparaciones mayores del motor, nuestros mecánicos experimentados lo manejan todo.">From minor tune-ups to major engine overhauls, our experienced mechanics handle it all.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-compact-disc"></i></div>
+                    <h3 data-en="Brake Service" data-es="Servicio de Frenos">Brake Service</h3>
+                    <p data-en="Brake inspections, pad replacements, rotor resurfacing, and complete brake system repairs for your safety." data-es="Inspecciones de frenos, reemplazo de pastillas, rectificación de rotores y reparaciones completas del sistema de frenos para su seguridad.">Brake inspections, pad replacements, rotor resurfacing, and complete brake system repairs for your safety.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-car-battery"></i></div>
+                    <h3 data-en="Battery & Electrical" data-es="Batería y Eléctrico">Battery & Electrical</h3>
+                    <p data-en="Battery testing, replacement, alternator repair, and full electrical system diagnostics." data-es="Pruebas de batería, reemplazo, reparación de alternador y diagnósticos completos del sistema eléctrico.">Battery testing, replacement, alternator repair, and full electrical system diagnostics.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-snowflake"></i></div>
+                    <h3 data-en="A/C & Heating" data-es="Aire Acondicionado y Calefacción">A/C & Heating</h3>
+                    <p data-en="Stay comfortable year-round with our air conditioning and heating system repair services." data-es="Manténgase cómodo todo el año con nuestros servicios de reparación de aire acondicionado y calefacción.">Stay comfortable year-round with our air conditioning and heating system repair services.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tire"></i></div>
+                    <h3 data-en="Tire Services" data-es="Servicios de Llantas">Tire Services</h3>
+                    <p data-en="Tire rotation, balancing, alignment, and replacement to ensure a smooth and safe ride." data-es="Rotación de llantas, balanceo, alineación y reemplazo para garantizar un viaje suave y seguro.">Tire rotation, balancing, alignment, and replacement to ensure a smooth and safe ride.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 data-en="Diagnostics" data-es="Diagnósticos">Diagnostics</h3>
+                    <p data-en="Advanced computer diagnostics to accurately identify and resolve check engine lights and other issues." data-es="Diagnósticos computarizados avanzados para identificar y resolver con precisión luces de check engine y otros problemas.">Advanced computer diagnostics to accurately identify and resolve check engine lights and other issues.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3 data-en="Transmission" data-es="Transmisión">Transmission</h3>
+                    <p data-en="Transmission fluid changes, repairs, and rebuilds for both automatic and manual transmissions." data-es="Cambios de fluido de transmisión, reparaciones y reconstrucciones para transmisiones automáticas y manuales.">Transmission fluid changes, repairs, and rebuilds for both automatic and manual transmissions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                    <h3 data-en="General Maintenance" data-es="Mantenimiento General">General Maintenance</h3>
+                    <p data-en="Preventive maintenance services including fluid checks, belt replacements, and multi-point inspections." data-es="Servicios de mantenimiento preventivo incluyendo revisión de fluidos, reemplazo de correas e inspecciones multipunto.">Preventive maintenance services including fluid checks, belt replacements, and multi-point inspections.</p>
+                </div>
+            </div>
+            <div class="services-cta">
+                <p data-en="Need a service not listed? Give us a call — we can help!" data-es="¿Necesita un servicio no listado? ¡Llámenos — podemos ayudar!">Need a service not listed? Give us a call — we can help!</p>
+                <a href="tel:6095293357" class="btn btn-primary"><i class="fas fa-phone"></i> 609-529-3357</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Why Choose B&W Auto Repair?" data-es="¿Por Qué Elegir B&W Auto Repair?">Why Choose B&W Auto Repair?</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 data-en="Honest & Transparent" data-es="Honesto y Transparente">Honest & Transparent</h3>
+                    <p data-en="No hidden fees, no unnecessary repairs. We explain everything before we start and give you upfront pricing." data-es="Sin cargos ocultos, sin reparaciones innecesarias. Le explicamos todo antes de comenzar y le damos precios por adelantado.">No hidden fees, no unnecessary repairs. We explain everything before we start and give you upfront pricing.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-users"></i></div>
+                    <h3 data-en="Family-Owned" data-es="Negocio Familiar">Family-Owned</h3>
+                    <p data-en="As a family-owned business, we treat every customer like family. Your satisfaction is our reputation." data-es="Como negocio familiar, tratamos a cada cliente como familia. Su satisfacción es nuestra reputación.">As a family-owned business, we treat every customer like family. Your satisfaction is our reputation.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-language"></i></div>
+                    <h3 data-en="Bilingual Service" data-es="Servicio Bilingüe">Bilingual Service</h3>
+                    <p data-en="We speak English and Spanish fluently, ensuring clear communication with all our customers." data-es="Hablamos inglés y español con fluidez, asegurando una comunicación clara con todos nuestros clientes.">We speak English and Spanish fluently, ensuring clear communication with all our customers.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 data-en="Quality Guaranteed" data-es="Calidad Garantizada">Quality Guaranteed</h3>
+                    <p data-en="We stand behind our work. All repairs come with a satisfaction guarantee because we believe in doing it right." data-es="Respaldamos nuestro trabajo. Todas las reparaciones vienen con garantía de satisfacción porque creemos en hacerlo bien.">We stand behind our work. All repairs come with a satisfaction guarantee because we believe in doing it right.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-clock"></i></div>
+                    <h3 data-en="Quick Turnaround" data-es="Entrega Rápida">Quick Turnaround</h3>
+                    <p data-en="We respect your time. Most services are completed same-day so you can get back on the road fast." data-es="Respetamos su tiempo. La mayoría de los servicios se completan el mismo día para que pueda volver a la carretera rápido.">We respect your time. Most services are completed same-day so you can get back on the road fast.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3 data-en="Convenient Location" data-es="Ubicación Conveniente">Convenient Location</h3>
+                    <p data-en="Centrally located in New Jersey for easy access from surrounding towns and communities." data-es="Ubicación central en New Jersey para fácil acceso desde pueblos y comunidades cercanas.">Centrally located in New Jersey for easy access from surrounding towns and communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="What Our Customers Say" data-es="Lo Que Dicen Nuestros Clientes">What Our Customers Say</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text" data-en="&quot;Honest and reliable! They fixed my brakes quickly and the price was very fair. I won't go anywhere else.&quot;" data-es="&quot;¡Honestos y confiables! Arreglaron mis frenos rápidamente y el precio fue muy justo. No iré a ningún otro lugar.&quot;">"Honest and reliable! They fixed my brakes quickly and the price was very fair. I won't go anywhere else."</p>
+                    <div class="review-author">— Maria R.</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text" data-en="&quot;Great service! They explained everything in Spanish which made me feel comfortable. Highly recommend B&W Auto Repair.&quot;" data-es="&quot;¡Excelente servicio! Me explicaron todo en español, lo que me hizo sentir cómodo. Recomiendo mucho B&W Auto Repair.&quot;">"Great service! They explained everything in Spanish which made me feel comfortable. Highly recommend B&W Auto Repair."</p>
+                    <div class="review-author">— Carlos M.</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text" data-en="&quot;I've been bringing my car here for over a year. Always professional, always fair. The best auto shop in Central Jersey!&quot;" data-es="&quot;He estado trayendo mi auto aquí por más de un año. Siempre profesionales, siempre justos. ¡El mejor taller en el Centro de Jersey!&quot;">"I've been bringing my car here for over a year. Always professional, always fair. The best auto shop in Central Jersey!"</p>
+                    <div class="review-author">— James T.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Contact Us" data-es="Contáctenos">Contact Us</h2>
+                <div class="divider"></div>
+                <p class="section-sub" data-en="Ready to schedule your appointment? Reach out today!" data-es="¿Listo para programar su cita? ¡Contáctenos hoy!">Ready to schedule your appointment? Reach out today!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4 data-en="Call Us" data-es="Llámenos">Call Us</h4>
+                            <a href="tel:6095293357" class="contact-link">609-529-3357</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4 data-en="Location" data-es="Ubicación">Location</h4>
+                            <p data-en="Central New Jersey" data-es="Centro de New Jersey">Central New Jersey</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4 data-en="Hours" data-es="Horario">Hours</h4>
+                            <p data-en="Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 8:00 AM - 2:00 PM<br>Sun: Closed" data-es="Lun - Vie: 8:00 AM - 6:00 PM<br>Sáb: 8:00 AM - 2:00 PM<br>Dom: Cerrado">Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 8:00 AM - 2:00 PM<br>Sun: Closed</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-language"></i></div>
+                        <div>
+                            <h4 data-en="Languages" data-es="Idiomas">Languages</h4>
+                            <p>English & Español</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta-box">
+                    <h3 data-en="Schedule Your Visit" data-es="Programe Su Visita">Schedule Your Visit</h3>
+                    <p data-en="Call us today to book your appointment. We offer same-day service for most repairs." data-es="Llámenos hoy para reservar su cita. Ofrecemos servicio el mismo día para la mayoría de las reparaciones.">Call us today to book your appointment. We offer same-day service for most repairs.</p>
+                    <a href="tel:6095293357" class="btn btn-primary btn-large"><i class="fas fa-phone"></i> <span data-en="Call 609-529-3357" data-es="Llame al 609-529-3357">Call 609-529-3357</span></a>
+                    <p class="contact-note" data-en="Se habla Español" data-es="We speak English">Se habla Español</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo footer-logo">
+                        <span class="logo-bw">B&W</span>
+                        <span class="logo-text">Auto Repair <small>LLC</small></span>
+                    </div>
+                    <p data-en="Professional auto repair and maintenance services in Central New Jersey. Honest work, fair prices." data-es="Servicios profesionales de reparación y mantenimiento automotriz en el Centro de New Jersey. Trabajo honesto, precios justos.">Professional auto repair and maintenance services in Central New Jersey. Honest work, fair prices.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
+                        <li><a href="#about" data-en="About" data-es="Nosotros">About</a></li>
+                        <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
+                        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-en="Contact Info" data-es="Información de Contacto">Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:6095293357">609-529-3357</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Central New Jersey</p>
+                    <p><i class="fas fa-language"></i> English & Español</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 B&W Auto Repair LLC. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
