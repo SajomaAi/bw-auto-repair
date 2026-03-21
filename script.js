@@ -172,24 +172,96 @@
     if (langLabel) langLabel.textContent = currentLang === 'en' ? 'ES' : 'EN';
   };
 
-  /* --- Form handlers --- */
+  /* --- Form handlers (Web3Forms) --- */
+  var W3F_ENDPOINT = 'https://api.web3forms.com/submit';
+
+  function setFormState(form, state) {
+    // state: 'loading' | 'success' | 'error' | 'reset'
+    var btn = form.querySelector('button[type="submit"]');
+    var successEl = form.querySelector('.form-success');
+    var errorEl   = form.querySelector('.form-error');
+    if (successEl) successEl.style.display = 'none';
+    if (errorEl)   errorEl.style.display   = 'none';
+    if (btn) {
+      btn.disabled = (state === 'loading');
+      btn.style.opacity = (state === 'loading') ? '0.7' : '';
+    }
+    if (state === 'success' && successEl) successEl.style.display = 'flex';
+    if (state === 'error'   && errorEl)   errorEl.style.display   = 'flex';
+  }
+
   window.handleAppointment = function (e) {
     e.preventDefault();
     var form = e.target;
-    var success = document.getElementById('formSuccess');
-    if (success) {
-      success.style.display = 'flex';
-      form.reset();
-      setTimeout(function () { success.style.display = 'none'; }, 5000);
-    }
+    setFormState(form, 'loading');
+
+    var data = new FormData(form);
+    fetch(W3F_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (json) {
+      if (json.success) {
+        setFormState(form, 'success');
+        form.reset();
+        setTimeout(function () { setFormState(form, 'reset'); }, 6000);
+      } else {
+        console.error('Web3Forms error:', json);
+        setFormState(form, 'error');
+        setTimeout(function () { setFormState(form, 'reset'); }, 6000);
+      }
+    })
+    .catch(function (err) {
+      console.error('Network error:', err);
+      setFormState(form, 'error');
+      setTimeout(function () { setFormState(form, 'reset'); }, 6000);
+    });
   };
 
   window.handlePayment = function (e) {
     e.preventDefault();
-    alert(currentLang === 'es'
-      ? '¡Gracias! Su pago está siendo procesado. Recibirá una confirmación pronto.'
-      : 'Thank you! Your payment is being processed. You will receive a confirmation shortly.');
-    e.target.reset();
+    var form = e.target;
+    setFormState(form, 'loading');
+
+    // Build a safe payload — exclude raw card number and CVV for security
+    var formData = new FormData(form);
+    var safeData = new FormData();
+    var safeFields = ['access_key', 'subject', 'from_name', 'redirect',
+                      'amount', 'invoice', 'cardName', 'zip', 'payPhone', 'payEmail'];
+    safeFields.forEach(function (f) {
+      if (formData.has(f)) safeData.append(f, formData.get(f));
+    });
+    // Add a masked card reference for reference
+    var rawCard = (formData.get('cardNumber') || '').replace(/\s/g, '');
+    if (rawCard.length >= 4) {
+      safeData.append('card_last4', '**** **** **** ' + rawCard.slice(-4));
+    }
+    safeData.append('expiry', formData.get('expiry') || '');
+
+    fetch(W3F_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: safeData
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (json) {
+      if (json.success) {
+        setFormState(form, 'success');
+        form.reset();
+        setTimeout(function () { setFormState(form, 'reset'); }, 6000);
+      } else {
+        console.error('Web3Forms error:', json);
+        setFormState(form, 'error');
+        setTimeout(function () { setFormState(form, 'reset'); }, 6000);
+      }
+    })
+    .catch(function (err) {
+      console.error('Network error:', err);
+      setFormState(form, 'error');
+      setTimeout(function () { setFormState(form, 'reset'); }, 6000);
+    });
   };
 
 })();
