@@ -669,6 +669,15 @@ img {
     font-size: 0.9rem;
     transition: var(--transition);
     outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+.form-group input[type="date"] {
+    cursor: pointer;
+    min-height: 44px;
+    position: relative;
+    z-index: 10;
 }
 
 .form-group input:focus,
