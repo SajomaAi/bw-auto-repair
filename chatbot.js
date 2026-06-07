@@ -103,68 +103,68 @@
   /* --- Knowledge Base (no server needed) --- */
   var KB = {
     hours: {
-      en: "Our hours are:\n\u2022 Monday \u2013 Friday: 8am \u2013 6pm\n\u2022 Saturday: 8am \u2013 4pm\n\u2022 Sunday: Closed\n\nNeed to schedule a visit? Just scroll up to our appointment form or call us at 609.529.3357!",
-      es: "Nuestro horario es:\n\u2022 Lunes \u2013 Viernes: 8am \u2013 6pm\n\u2022 S\u00e1bado: 8am \u2013 4pm\n\u2022 Domingo: Cerrado\n\n\u00bfNecesita programar una visita? \u00a1Suba al formulario de citas o ll\u00e1menos al 609.529.3357!"
+      en: "Our hours are:\n\u2022 Monday \u2013 Friday: 8am \u2013 6pm\n\u2022 Saturday: 8am \u2013 4pm\n\u2022 Sunday: Closed\n\nNeed to schedule a visit? Just scroll up to our appointment form or call us at 609.362.5476!",
+      es: "Nuestro horario es:\n\u2022 Lunes \u2013 Viernes: 8am \u2013 6pm\n\u2022 S\u00e1bado: 8am \u2013 4pm\n\u2022 Domingo: Cerrado\n\n\u00bfNecesita programar una visita? \u00a1Suba al formulario de citas o ll\u00e1menos al 609.362.5476!"
     },
     location: {
       en: "We\u2019re located at 843 Route 33 West, Monroe Township, NJ 08831. We\u2019re easy to find right on Route 33! Come visit us anytime during business hours.",
       es: "Estamos ubicados en 843 Route 33 West, Monroe Township, NJ 08831. \u00a1Somos f\u00e1ciles de encontrar en la Ruta 33! Vis\u00edtenos en horario de atenci\u00f3n."
     },
     services: {
-      en: "We offer a full range of auto repair services:\n\u2022 Auto Repair (engine, transmission, diagnostics)\n\u2022 Maintenance (oil changes, tune-ups, fluid checks)\n\u2022 Brakes (pads, rotors, calipers)\n\u2022 Electrical (batteries, alternators, wiring)\n\u2022 Exhaust (mufflers, catalytic converters)\n\u2022 A/C (diagnostics, recharge, repair)\n\u2022 Suspension (shocks, struts, alignment)\n\u2022 Welding Services\n\u2022 Tire Repair & Rotation\n\nWant to book a service? Use the appointment form above or call 609.529.3357!",
-      es: "Ofrecemos una gama completa de servicios de reparaci\u00f3n automotriz:\n\u2022 Reparaci\u00f3n Automotriz (motor, transmisi\u00f3n, diagn\u00f3stico)\n\u2022 Mantenimiento (cambios de aceite, afinaciones)\n\u2022 Frenos (pastillas, rotores, calibradores)\n\u2022 El\u00e9ctrico (bater\u00edas, alternadores, cableado)\n\u2022 Escape (silenciadores, convertidores catal\u00edticos)\n\u2022 Aire Acondicionado\n\u2022 Suspensi\u00f3n (amortiguadores, alineaci\u00f3n)\n\u2022 Servicios de Soldadura\n\u2022 Reparaci\u00f3n y Rotaci\u00f3n de Llantas\n\n\u00bfDesea agendar un servicio? \u00a1Use el formulario de citas arriba o llame al 609.529.3357!"
+      en: "We offer a full range of auto repair services:\n\u2022 Auto Repair (engine, transmission, diagnostics)\n\u2022 Maintenance (oil changes, tune-ups, fluid checks)\n\u2022 Brakes (pads, rotors, calipers)\n\u2022 Electrical (batteries, alternators, wiring)\n\u2022 Exhaust (mufflers, catalytic converters)\n\u2022 A/C (diagnostics, recharge, repair)\n\u2022 Suspension (shocks, struts, alignment)\n\u2022 Welding Services\n\u2022 Tire Repair & Rotation\n\nWant to book a service? Use the appointment form above or call 609.362.5476!",
+      es: "Ofrecemos una gama completa de servicios de reparaci\u00f3n automotriz:\n\u2022 Reparaci\u00f3n Automotriz (motor, transmisi\u00f3n, diagn\u00f3stico)\n\u2022 Mantenimiento (cambios de aceite, afinaciones)\n\u2022 Frenos (pastillas, rotores, calibradores)\n\u2022 El\u00e9ctrico (bater\u00edas, alternadores, cableado)\n\u2022 Escape (silenciadores, convertidores catal\u00edticos)\n\u2022 Aire Acondicionado\n\u2022 Suspensi\u00f3n (amortiguadores, alineaci\u00f3n)\n\u2022 Servicios de Soldadura\n\u2022 Reparaci\u00f3n y Rotaci\u00f3n de Llantas\n\n\u00bfDesea agendar un servicio? \u00a1Use el formulario de citas arriba o llame al 609.362.5476!"
     },
     appointment: {
-      en: "You can request an appointment right here on our website! Just scroll up to the \u201cMake Your Appointment Today\u201d section and fill out the form. Or call us directly at 609.529.3357 \u2014 we\u2019ll get you scheduled right away!",
-      es: "\u00a1Puede solicitar una cita aqu\u00ed mismo en nuestro sitio web! Suba a la secci\u00f3n \u201cHaga Su Cita Hoy\u201d y complete el formulario. O ll\u00e1menos directamente al 609.529.3357 \u2014 \u00a1lo programaremos de inmediato!"
+      en: "You can request an appointment right here on our website! Just scroll up to the \u201cMake Your Appointment Today\u201d section and fill out the form. Or call us directly at 609.362.5476 \u2014 we\u2019ll get you scheduled right away!",
+      es: "\u00a1Puede solicitar una cita aqu\u00ed mismo en nuestro sitio web! Suba a la secci\u00f3n \u201cHaga Su Cita Hoy\u201d y complete el formulario. O ll\u00e1menos directamente al 609.362.5476 \u2014 \u00a1lo programaremos de inmediato!"
     },
     spanish: {
       en: "\u00a1S\u00ed, hablamos Espa\u00f1ol! Our team is fully bilingual. Feel free to communicate in Spanish \u2014 we\u2019re here to help in whichever language you prefer. \u00bfEn qu\u00e9 podemos ayudarle?",
       es: "\u00a1S\u00ed, hablamos Espa\u00f1ol! Nuestro equipo es completamente biling\u00fce. Si\u00e9ntase libre de comunicarse en espa\u00f1ol \u2014 estamos aqu\u00ed para ayudarle. \u00bfEn qu\u00e9 podemos ayudarle?"
     },
     phone: {
-      en: "You can reach us at 609.529.3357. We\u2019re available Monday\u2013Friday 8am\u20136pm and Saturday 8am\u20134pm. We look forward to hearing from you!",
-      es: "Puede comunicarse con nosotros al 609.529.3357. Estamos disponibles de lunes a viernes de 8am a 6pm y s\u00e1bados de 8am a 4pm. \u00a1Esperamos su llamada!"
+      en: "You can reach us at 609.362.5476. We\u2019re available Monday\u2013Friday 8am\u20136pm and Saturday 8am\u20134pm. We look forward to hearing from you!",
+      es: "Puede comunicarse con nosotros al 609.362.5476. Estamos disponibles de lunes a viernes de 8am a 6pm y s\u00e1bados de 8am a 4pm. \u00a1Esperamos su llamada!"
     },
     payment: {
-      en: "You can pay your invoice conveniently online! Scroll down to our \u201cPay Your Invoice\u201d section on this page. You can also pay by phone \u2014 just call us at 609.529.3357.",
-      es: "\u00a1Puede pagar su factura c\u00f3modamente en l\u00ednea! Baje a la secci\u00f3n \u201cPague Su Factura\u201d en esta p\u00e1gina. Tambi\u00e9n puede pagar por tel\u00e9fono \u2014 ll\u00e1menos al 609.529.3357."
+      en: "You can pay your invoice conveniently online! Scroll down to our \u201cPay Your Invoice\u201d section on this page. You can also pay by phone \u2014 just call us at 609.362.5476.",
+      es: "\u00a1Puede pagar su factura c\u00f3modamente en l\u00ednea! Baje a la secci\u00f3n \u201cPague Su Factura\u201d en esta p\u00e1gina. Tambi\u00e9n puede pagar por tel\u00e9fono \u2014 ll\u00e1menos al 609.362.5476."
     },
     pricing: {
-      en: "Our pricing is always fair and transparent \u2014 no hidden fees! The cost depends on the specific service your vehicle needs. Call us at 609.529.3357 or book an appointment for a free estimate.",
-      es: "Nuestros precios son siempre justos y transparentes \u2014 \u00a1sin cargos ocultos! El costo depende del servicio espec\u00edfico que necesite su veh\u00edculo. Ll\u00e1menos al 609.529.3357 o agende una cita para un presupuesto gratuito."
+      en: "Our pricing is always fair and transparent \u2014 no hidden fees! The cost depends on the specific service your vehicle needs. Call us at 609.362.5476 or book an appointment for a free estimate.",
+      es: "Nuestros precios son siempre justos y transparentes \u2014 \u00a1sin cargos ocultos! El costo depende del servicio espec\u00edfico que necesite su veh\u00edculo. Ll\u00e1menos al 609.362.5476 o agende una cita para un presupuesto gratuito."
     },
     oil: {
-      en: "Yes, we do oil changes! Regular oil changes are essential for your engine\u2019s health. We handle conventional, synthetic blend, and full synthetic oil changes. Book an appointment or call 609.529.3357!",
-      es: "\u00a1S\u00ed, hacemos cambios de aceite! Los cambios regulares son esenciales para la salud de su motor. Manejamos aceite convencional, semi-sint\u00e9tico y sint\u00e9tico completo. \u00a1Agende una cita o llame al 609.529.3357!"
+      en: "Yes, we do oil changes! Regular oil changes are essential for your engine\u2019s health. We handle conventional, synthetic blend, and full synthetic oil changes. Book an appointment or call 609.362.5476!",
+      es: "\u00a1S\u00ed, hacemos cambios de aceite! Los cambios regulares son esenciales para la salud de su motor. Manejamos aceite convencional, semi-sint\u00e9tico y sint\u00e9tico completo. \u00a1Agende una cita o llame al 609.362.5476!"
     },
     brakes: {
-      en: "We\u2019re brake experts! We handle brake pads, rotors, calipers, brake fluid, and complete brake system service. If you hear squeaking or feel vibration when braking, come see us right away. Call 609.529.3357!",
-      es: "\u00a1Somos expertos en frenos! Manejamos pastillas, rotores, calibradores, l\u00edquido de frenos y servicio completo del sistema de frenos. Si escucha chirridos o siente vibraci\u00f3n al frenar, \u00a1venga a vernos! Llame al 609.529.3357."
+      en: "We\u2019re brake experts! We handle brake pads, rotors, calipers, brake fluid, and complete brake system service. If you hear squeaking or feel vibration when braking, come see us right away. Call 609.362.5476!",
+      es: "\u00a1Somos expertos en frenos! Manejamos pastillas, rotores, calibradores, l\u00edquido de frenos y servicio completo del sistema de frenos. Si escucha chirridos o siente vibraci\u00f3n al frenar, \u00a1venga a vernos! Llame al 609.362.5476."
     },
     tires: {
-      en: "We offer tire repair, rotation, balancing, and replacement. Keeping your tires in good condition is crucial for safety. Come in for a check or call us at 609.529.3357!",
-      es: "\u00a1Ofrecemos reparaci\u00f3n, rotaci\u00f3n, balanceo y reemplazo de llantas! Mantener sus llantas en buena condici\u00f3n es crucial para la seguridad. \u00a1Venga para una revisi\u00f3n o ll\u00e1menos al 609.529.3357!"
+      en: "We offer tire repair, rotation, balancing, and replacement. Keeping your tires in good condition is crucial for safety. Come in for a check or call us at 609.362.5476!",
+      es: "\u00a1Ofrecemos reparaci\u00f3n, rotaci\u00f3n, balanceo y reemplazo de llantas! Mantener sus llantas en buena condici\u00f3n es crucial para la seguridad. \u00a1Venga para una revisi\u00f3n o ll\u00e1menos al 609.362.5476!"
     },
     engine: {
-      en: "We handle all engine repairs \u2014 from diagnostics to complete rebuilds. Check engine light on? Bring it in and we\u2019ll diagnose it. Call 609.529.3357 to schedule!",
-      es: "Manejamos todas las reparaciones de motor \u2014 desde diagn\u00f3sticos hasta reconstrucciones completas. \u00bfSe encendi\u00f3 la luz del motor? Tr\u00e1igalo y lo diagnosticaremos. \u00a1Llame al 609.529.3357!"
+      en: "We handle all engine repairs \u2014 from diagnostics to complete rebuilds. Check engine light on? Bring it in and we\u2019ll diagnose it. Call 609.362.5476 to schedule!",
+      es: "Manejamos todas las reparaciones de motor \u2014 desde diagn\u00f3sticos hasta reconstrucciones completas. \u00bfSe encendi\u00f3 la luz del motor? Tr\u00e1igalo y lo diagnosticaremos. \u00a1Llame al 609.362.5476!"
     },
     transmission: {
-      en: "Yes, we service transmissions! Whether it\u2019s a fluid change, repair, or rebuild, our experienced mechanics can handle it. Call us at 609.529.3357 for a consultation.",
-      es: "\u00a1S\u00ed, damos servicio a transmisiones! Ya sea cambio de fluido, reparaci\u00f3n o reconstrucci\u00f3n, nuestros mec\u00e1nicos experimentados pueden manejarlo. Llame al 609.529.3357 para una consulta."
+      en: "Yes, we service transmissions! Whether it\u2019s a fluid change, repair, or rebuild, our experienced mechanics can handle it. Call us at 609.362.5476 for a consultation.",
+      es: "\u00a1S\u00ed, damos servicio a transmisiones! Ya sea cambio de fluido, reparaci\u00f3n o reconstrucci\u00f3n, nuestros mec\u00e1nicos experimentados pueden manejarlo. Llame al 609.362.5476 para una consulta."
     },
     ac: {
-      en: "We provide full A/C service \u2014 diagnostics, recharge, and repair. Stay cool and comfortable! Schedule a visit or call 609.529.3357.",
-      es: "Ofrecemos servicio completo de aire acondicionado \u2014 diagn\u00f3stico, recarga y reparaci\u00f3n. \u00a1Mant\u00e9ngase fresco y c\u00f3modo! Agende una visita o llame al 609.529.3357."
+      en: "We provide full A/C service \u2014 diagnostics, recharge, and repair. Stay cool and comfortable! Schedule a visit or call 609.362.5476.",
+      es: "Ofrecemos servicio completo de aire acondicionado \u2014 diagn\u00f3stico, recarga y reparaci\u00f3n. \u00a1Mant\u00e9ngase fresco y c\u00f3modo! Agende una visita o llame al 609.362.5476."
     },
     welding: {
-      en: "We offer professional welding services for exhaust systems, frames, brackets, and custom fabrication. Call 609.529.3357 to discuss your welding needs!",
-      es: "Ofrecemos servicios profesionales de soldadura para sistemas de escape, marcos, soportes y fabricaci\u00f3n personalizada. \u00a1Llame al 609.529.3357 para discutir sus necesidades de soldadura!"
+      en: "We offer professional welding services for exhaust systems, frames, brackets, and custom fabrication. Call 609.362.5476 to discuss your welding needs!",
+      es: "Ofrecemos servicios profesionales de soldadura para sistemas de escape, marcos, soportes y fabricaci\u00f3n personalizada. \u00a1Llame al 609.362.5476 para discutir sus necesidades de soldadura!"
     },
     default: {
-      en: "Thanks for reaching out! For the best assistance, please call us directly at 609.529.3357 or use the appointment form above. We\u2019re happy to help with any auto repair needs!",
-      es: "\u00a1Gracias por contactarnos! Para la mejor asistencia, ll\u00e1menos directamente al 609.529.3357 o use el formulario de citas arriba. \u00a1Estamos felices de ayudarle con cualquier necesidad de reparaci\u00f3n automotriz!"
+      en: "Thanks for reaching out! For the best assistance, please call us directly at 609.362.5476 or use the appointment form above. We\u2019re happy to help with any auto repair needs!",
+      es: "\u00a1Gracias por contactarnos! Para la mejor asistencia, ll\u00e1menos directamente al 609.362.5476 o use el formulario de citas arriba. \u00a1Estamos felices de ayudarle con cualquier necesidad de reparaci\u00f3n automotriz!"
     }
   };
 
@@ -227,9 +227,9 @@
     for (var t = 0; t < thanks.length; t++) {
       if (lower.indexOf(thanks[t]) !== -1) {
         if (lang === 'es') {
-          return '\u00a1De nada! Estamos aqu\u00ed para ayudarle. Si necesita algo m\u00e1s, no dude en preguntar o ll\u00e1menos al 609.529.3357.';
+          return '\u00a1De nada! Estamos aqu\u00ed para ayudarle. Si necesita algo m\u00e1s, no dude en preguntar o ll\u00e1menos al 609.362.5476.';
         }
-        return 'You\u2019re welcome! We\u2019re here to help. If you need anything else, don\u2019t hesitate to ask or call us at 609.529.3357.';
+        return 'You\u2019re welcome! We\u2019re here to help. If you need anything else, don\u2019t hesitate to ask or call us at 609.362.5476.';
       }
     }
 
