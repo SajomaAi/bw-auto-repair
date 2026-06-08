@@ -117,66 +117,9 @@
                 <h2 class="section-title" data-en="MAKE YOUR APPOINTMENT TODAY" data-es="HAGA SU CITA HOY">MAKE YOUR APPOINTMENT TODAY</h2>
                 <p class="section-subtitle" data-en="Schedule your service quickly and easily" data-es="Programe su servicio rápida y fácilmente">Schedule your service quickly and easily</p>
             </div>
-            <form class="appointment-form" id="appointmentForm" onsubmit="handleAppointment(event)">
-                <!-- Web3Forms -->
-                <input type="hidden" name="access_key" value="57cab8ef-de49-4219-9218-ee6257ebc8f6">
-                <input type="hidden" name="subject" value="New Appointment Request — B&W Auto Repair">
-                <input type="hidden" name="from_name" value="B&W Auto Repair Website">
-                <input type="hidden" name="redirect" value="false">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label data-en="Full Name" data-es="Nombre Completo">Full Name</label>
-                        <input type="text" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
-                        <input type="tel" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Email Address" data-es="Correo Electrónico">Email Address</label>
-                        <input type="email" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Service Type" data-es="Tipo de Servicio">Service Type</label>
-                        <select name="service" required>
-                            <option value="" data-en="Select a service..." data-es="Seleccione un servicio...">Select a service...</option>
-                            <option value="auto-repair" data-en="Auto Repair" data-es="Reparación Automotriz">Auto Repair</option>
-                            <option value="maintenance" data-en="Maintenance" data-es="Mantenimiento">Maintenance</option>
-                            <option value="brakes" data-en="Brakes" data-es="Frenos">Brakes</option>
-                            <option value="electrical" data-en="Electrical" data-es="Eléctrico">Electrical</option>
-                            <option value="exhaust" data-en="Exhaust" data-es="Escape">Exhaust</option>
-                            <option value="ac" data-en="A/C" data-es="Aire Acondicionado">A/C</option>
-                            <option value="suspension" data-en="Suspension" data-es="Suspensión">Suspension</option>
-                            <option value="welding" data-en="Welding Services" data-es="Servicios de Soldadura">Welding Services</option>
-                            <option value="tires" data-en="Tire Repair &amp; Rotation" data-es="Reparación y Rotación de Llantas">Tire Repair &amp; Rotation</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Preferred Date" data-es="Fecha Preferida">Preferred Date</label>
-                        <input type="date" name="date" required onclick="this.showPicker?.()" style="cursor: pointer;">
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Vehicle (Year, Make, Model)" data-es="Vehículo (Año, Marca, Modelo)">Vehicle (Year, Make, Model)</label>
-                        <input type="text" name="vehicle" placeholder="e.g. 2020 Honda Civic">
-                    </div>
-                    <div class="form-group full-width">
-                        <label data-en="Additional Notes" data-es="Notas Adicionales">Additional Notes</label>
-                        <textarea name="notes" rows="4" style="cursor: text;"></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary btn-submit">
-                    <i class="fas fa-calendar-check"></i>
-                    <span data-en="REQUEST APPOINTMENT" data-es="SOLICITAR CITA">REQUEST APPOINTMENT</span>
-                </button>
-                <div class="form-success" id="formSuccess" style="display:none;">
-                    <i class="fas fa-check-circle"></i>
-                    <span data-en="Thank you! We'll contact you shortly to confirm your appointment." data-es="¡Gracias! Nos pondremos en contacto pronto para confirmar su cita.">Thank you! We'll contact you shortly to confirm your appointment.</span>
-                </div>
-                <div class="form-error" id="formError" style="display:none;">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <span data-en="Something went wrong. Please call us at 609-362-5476." data-es="Algo salió mal. Por favor llámenos al 609-362-5476.">Something went wrong. Please call us at 609-362-5476.</span>
-                </div>
-            </form>
+            <div class="brevo-form-container" style="display: flex; justify-content: center; width: 100%;">
+                <iframe width="540" height="520" src="https://d3b42ee3.sibforms.com/v2/serve/MUIFAKLnm0zl2rzcjYIZYnyCY2CkJj7YopegN3UW8HKuzblUPI9pgVI5Vm1hdg-gYjcOd5e2iJsxyHeJ2wr5yCHEPYEKUiSMMEEAQM9RVp0mPsDChnoGCmz8-5IF-0_12rQF_1tEyBSO1gtJlf91QsG-aDUgaqbKYm6kMAhAqaCreib32PgZGpJ9gxG5tfnl-Rep8nhR2u9wee74Q==" frameborder="0" scrolling="auto" allowfullscreen style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; border-radius: 8px;"></iframe>
+            </div>
         </div>
     </section>
 
