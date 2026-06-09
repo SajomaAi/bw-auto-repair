@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Consent & Terms — B&W Auto Repair LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #e8e8e8;
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background: rgba(10, 10, 10, 0.98);
+            border-bottom: 1px solid #2a2a2a;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo:hover {
+            color: #D72B2B;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e8e8e8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #D72B2B;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: #D72B2B;
+            font-size: 14px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #D72B2B;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #c8c8c8;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #c8c8c8;
+        }
+
+        a {
+            color: #D72B2B;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: rgba(215, 43, 43, 0.1);
+            border-left: 4px solid #D72B2B;
+            padding: 20px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box strong {
+            color: #D72B2B;
+        }
+
+        .consent-section {
+            background: rgba(42, 42, 42, 0.5);
+            border: 1px solid #2a2a2a;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .consent-section h3 {
+            margin-top: 0;
+        }
+
+        .message-example {
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid #2a2a2a;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+            color: #D72B2B;
+        }
+
+        footer {
+            background: rgba(10, 10, 10, 0.98);
+            border-top: 1px solid #2a2a2a;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            color: #888;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">B&W Auto Repair</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>SMS Consent & Terms</h1>
+        <p class="subtitle">Text Message Notifications Agreement</p>
+
+        <h2>1. SMS Service Overview</h2>
+        <p>B&W Auto Repair LLC offers SMS (text message) notifications to keep you informed about your vehicle service. By opting in, you agree to receive text messages at the phone number you provide.</p>
+
+        <div class="highlight-box">
+            <p><strong>Service Provider:</strong> B&W Auto Repair LLC</p>
+            <p><strong>Phone Number:</strong> 609.362.5476</p>
+            <p><strong>Email:</strong> bw_autorepair@hotmail.com</p>
+        </div>
+
+        <h2>2. Types of Messages You May Receive</h2>
+        <p>When you opt in to SMS notifications, you may receive:</p>
+        <ul>
+            <li><strong>Appointment Reminders:</strong> Confirmation and reminder messages for scheduled appointments</li>
+            <li><strong>Service Updates:</strong> Status updates on your vehicle repair or maintenance</li>
+            <li><strong>Completion Notices:</strong> Notification when your service is complete and ready for pickup</li>
+            <li><strong>Promotional Offers:</strong> Special deals, discounts, and service announcements (optional)</li>
+            <li><strong>Important Notices:</strong> Critical information about your account or service</li>
+        </ul>
+
+        <h2>3. Opt-In Consent</h2>
+        <p>By providing your phone number and selecting the SMS notification option, you explicitly consent to receive text messages from B&W Auto Repair LLC at the phone number you provided. This consent is voluntary.</p>
+
+        <div class="consent-section">
+            <h3>What You're Agreeing To:</h3>
+            <ul>
+                <li>Receive SMS messages from B&W Auto Repair LLC</li>
+                <li>Messages will be sent to the phone number you provide</li>
+                <li>Standard message and data rates may apply from your mobile carrier</li>
+                <li>You are responsible for any charges from your carrier</li>
+                <li>Messages may be sent at any time, including outside business hours</li>
+            </ul>
+        </div>
+
+        <h2>4. Message Frequency</h2>
+        <p>The frequency of messages depends on your activity:</p>
+        <ul>
+            <li><strong>Appointment Reminders:</strong> Typically 24 hours before your scheduled appointment</li>
+            <li><strong>Service Updates:</strong> As needed during your service (usually 1-3 messages per service visit)</li>
+            <li><strong>Promotional Messages:</strong> Up to 2-4 times per month (if opted in)</li>
+        </ul>
+
+        <h2>5. Carrier Charges</h2>
+        <p>Standard message and data rates apply. SMS messages are sent to your mobile phone and may count against your mobile plan's text message allowance. B&W Auto Repair LLC is not responsible for any charges incurred by your mobile carrier. Contact your carrier for details about your plan.</p>
+
+        <h2>6. How to Opt Out</h2>
+        <p>You can stop receiving SMS messages at any time by:</p>
+        <ul>
+            <li><strong>Replying "STOP"</strong> to any text message from B&W Auto Repair LLC</li>
+            <li><strong>Calling us:</strong> <a href="tel:+16093625476">609.362.5476</a></li>
+            <li><strong>Emailing us:</strong> <a href="mailto:bw_autorepair@hotmail.com">bw_autorepair@hotmail.com</a></li>
+        </ul>
+        <p>After you opt out, we will send you a confirmation message. You will no longer receive SMS notifications, but you may still receive appointment reminders if you have an active appointment.</p>
+
+        <h2>7. Message Examples</h2>
+        <p>Here are examples of messages you may receive:</p>
+
+        <div class="message-example">
+            <strong>Appointment Reminder:</strong><br>
+            Hi! Your appointment at B&W Auto Repair is tomorrow at 10:00 AM. Please call 609.362.5476 if you need to reschedule.
+        </div>
+
+        <div class="message-example">
+            <strong>Service Update:</strong><br>
+            Your vehicle service is in progress. We'll send you an update when it's complete. Questions? Call 609.362.5476.
+        </div>
+
+        <div class="message-example">
+            <strong>Completion Notice:</strong><br>
+            Your vehicle is ready for pickup! Your service total is $XXX. Call 609.362.5476 to arrange pickup.
+        </div>
+
+        <h2>8. Data Privacy</h2>
+        <p>Your phone number and SMS preferences are protected under our <a href="/privacy-policy">Privacy Policy</a>. We do not share your phone number with third parties without your consent, except as required by law or to process your SMS service.</p>
+
+        <h2>9. Help & Support</h2>
+        <p>For help with SMS messages or to update your preferences, contact us:</p>
+        <div class="highlight-box">
+            <p><strong>📞 Phone:</strong> <a href="tel:+16093625476">609.362.5476</a></p>
+            <p><strong>📧 Email:</strong> <a href="mailto:bw_autorepair@hotmail.com">bw_autorepair@hotmail.com</a></p>
+            <p><strong>🕐 Hours:</strong> Monday–Friday, 8:00 AM–6:00 PM</p>
+        </div>
+
+        <h2>10. Changes to This Agreement</h2>
+        <p>B&W Auto Repair LLC may update this SMS Consent & Terms agreement at any time. We will notify you of material changes via SMS or email. Your continued use of SMS notifications constitutes acceptance of any updates.</p>
+
+        <h2>11. Liability</h2>
+        <p>B&W Auto Repair LLC is not liable for:</p>
+        <ul>
+            <li>Delayed or undelivered messages</li>
+            <li>Mobile carrier service interruptions</li>
+            <li>Charges from your mobile carrier</li>
+            <li>Technical issues beyond our control</li>
+        </ul>
+
+        <h2>12. Acknowledgment</h2>
+        <p>By opting in to receive SMS messages from B&W Auto Repair LLC, you acknowledge that you:</p>
+        <ul>
+            <li>Have read and understand this SMS Consent & Terms agreement</li>
+            <li>Consent to receive text messages at the phone number provided</li>
+            <li>Are at least 18 years old (or have parental consent)</li>
+            <li>Own or have permission to use the phone number provided</li>
+            <li>Understand that standard message and data rates may apply</li>
+        </ul>
+
+        <p class="last-updated">This SMS Consent & Terms agreement is effective as of June 2026 and was last updated on June 7, 2026.</p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 B&W Auto Repair LLC. All rights reserved.</p>
+            <p>Monroe Township, New Jersey | <a href="tel:+16093625476">609.362.5476</a></p>
+        </div>
+    </footer>
+</body>
+</html>
