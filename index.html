@@ -117,9 +117,50 @@
                 <h2 class="section-title" data-en="MAKE YOUR APPOINTMENT TODAY" data-es="HAGA SU CITA HOY">MAKE YOUR APPOINTMENT TODAY</h2>
                 <p class="section-subtitle" data-en="Schedule your service quickly and easily" data-es="Programe su servicio rápida y fácilmente">Schedule your service quickly and easily</p>
             </div>
-            <div class="brevo-form-container" style="display: flex; justify-content: center; width: 100%;">
-                <iframe width="540" height="520" src="https://d3b42ee3.sibforms.com/v2/serve/MUIFAKLnm0zl2rzcjYIZYnyCY2CkJj7YopegN3UW8HKuzblUPI9pgVI5Vm1hdg-gYjcOd5e2iJsxyHeJ2wr5yCHEPYEKUiSMMEEAQM9RVp0mPsDChnoGCmz8-5IF-0_12rQF_1tEyBSO1gtJlf91QsG-aDUgaqbKYm6kMAhAqaCreib32PgZGpJ9gxG5tfnI-Rep8nhR2u9wee74Q==" frameborder="0" scrolling="auto" allowfullscreen style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; border-radius: 8px;"></iframe>
-            </div>
+            <form class="appointment-form" id="appointmentForm">
+                <input type="hidden" name="access_key" value="57cab8ef-de49-4219-9218-ee6257ebc8f6">
+                <input type="hidden" name="subject" value="New Appointment Request — B&W Auto Repair">
+                <div class="form-group">
+                    <label for="apptName" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
+                    <input type="text" id="apptName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="apptPhone" data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+                    <input type="tel" id="apptPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="apptEmail" data-en="Email" data-es="Correo Electrónico">Email</label>
+                    <input type="email" id="apptEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="apptService" data-en="Service Type" data-es="Tipo de Servicio">Service Type</label>
+                    <select id="apptService" name="service" required>
+                        <option value="" data-en="Select a service" data-es="Selecciona un servicio">Select a service</option>
+                        <option value="Oil Change" data-en="Oil Change" data-es="Cambio de Aceite">Oil Change</option>
+                        <option value="Brake Service" data-en="Brake Service" data-es="Servicio de Frenos">Brake Service</option>
+                        <option value="Tire Service" data-en="Tire Service" data-es="Servicio de Llantas">Tire Service</option>
+                        <option value="Engine Repair" data-en="Engine Repair" data-es="Reparación de Motor">Engine Repair</option>
+                        <option value="Transmission" data-en="Transmission" data-es="Transmisión">Transmission</option>
+                        <option value="A/C Service" data-en="A/C Service" data-es="Servicio de A/C">A/C Service</option>
+                        <option value="Welding" data-en="Welding" data-es="Soldadura">Welding</option>
+                        <option value="Suspension" data-en="Suspension" data-es="Suspensión">Suspension</option>
+                        <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="apptDate" data-en="Preferred Date" data-es="Fecha Preferida">Preferred Date</label>
+                    <input type="date" id="apptDate" name="date" required onclick="this.showPicker?.()" style="cursor: pointer;">
+                </div>
+                <div class="form-group">
+                    <label for="apptVehicle" data-en="Vehicle (Year, Make, Model)" data-es="Vehículo (Año, Marca, Modelo)">Vehicle (Year, Make, Model)</label>
+                    <input type="text" id="apptVehicle" name="vehicle" placeholder="e.g., 2020 Honda Civic" required>
+                </div>
+                <div class="form-group">
+                    <label for="apptNotes" data-en="Additional Notes" data-es="Notas Adicionales">Additional Notes</label>
+                    <textarea id="apptNotes" name="notes" rows="4" placeholder="Tell us about your repair needs..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" data-en="SCHEDULE APPOINTMENT" data-es="AGENDAR CITA">SCHEDULE APPOINTMENT</button>
+            </form>
         </div>
     </section>
 
