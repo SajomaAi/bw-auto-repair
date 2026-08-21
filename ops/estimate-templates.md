@@ -1,6 +1,6 @@
 # Estimate Templates — B&W Auto Repair LLC
 
-Customer-facing templates for sending estimates. Two channels: email (via QuickBooks)
+Customer-facing templates for sending estimates. Two channels — email (via QuickBooks)
 and text. Placeholders are in `{{DOUBLE_BRACES}}` — fill every one before sending.
 
 Shop contact block used throughout:
@@ -8,7 +8,7 @@ Shop contact block used throughout:
 
 ---
 
-## 1. Email template
+## 1. Email template (English)
 
 **How this gets sent:** paste the body below into the *message* field when sending
 the estimate from QuickBooks (Save and send), or hand it to Claude to send. QuickBooks
@@ -59,7 +59,7 @@ bwautorepairllc.com
 
 ---
 
-## 2. Text template
+## 2. Text template (English)
 
 Estimates are a **Service Update** under the SMS terms at `/sms-consent.html`, so they
 go only to customers who have consented. Voice matches the existing message examples
@@ -92,7 +92,88 @@ directly. If you copy a shareable link out of QuickBooks by hand, drop it in pla
 
 ---
 
-## 3. Filling the placeholders
+## 3. Email template (Spanish)
+
+Same mechanics as the English version: this is the *message* body of a QuickBooks send.
+Uses the `usted` form throughout, which is what a customer expects from a business.
+
+### Subject
+
+```
+Su estimado de B&W Auto Repair — {{YEAR_MAKE_MODEL}} (Estimado #{{ESTIMATE_NO}})
+```
+
+### Body
+
+```
+Hola {{FIRST_NAME}}:
+
+Gracias por traernos su {{YEAR_MAKE_MODEL}}. Aquí está el estimado del
+trabajo que conversamos:
+
+{{WORK_SUMMARY_ES}}
+
+Total del estimado: ${{TOTAL}}
+
+El desglose completo — piezas y mano de obra, línea por línea — viene
+adjunto, y puede revisarlo y aprobarlo con el botón de arriba. No pedimos
+ninguna pieza ni empezamos ningún trabajo hasta que usted nos dé el visto
+bueno.
+
+Dos cosas que vale la pena saber:
+
+- Este estimado es válido por 30 días. Después de esa fecha el precio de
+  las piezas puede cambiar.
+- Si al abrir encontramos algo que no se veía por fuera, paramos y lo
+  llamamos primero. Usted no va a recibir una factura con sorpresas.
+
+¿Tiene preguntas, o quiere que le expliquemos qué es urgente y qué puede
+esperar? Llámenos o mándenos un mensaje de texto al 609.362.5476 — con
+gusto se lo explicamos.
+
+Gracias,
+B&W Auto Repair LLC
+609.362.5476 | bw_autorepair@hotmail.com
+bwautorepairllc.com
+```
+
+**A note on the word "estimado":** that is the term US shops use and the one your
+customers will recognize. `presupuesto` and `cotización` are more standard in Latin
+America and Spain — swap if a particular customer seems to expect it.
+
+---
+
+## 4. Text template (Spanish)
+
+### Standard version
+
+```
+¡Hola {{FIRST_NAME}}! Su estimado de B&W Auto Repair para el {{YEAR_MAKE_MODEL}}
+está listo — {{WORK_SHORT_ES}}, ${{TOTAL}} en total. Le enviamos el desglose
+completo a {{EMAIL}}; puede aprobarlo desde ese correo. ¿Preguntas? Llame al
+609.362.5476. Responda STOP para no recibir más mensajes.
+```
+
+### Short version
+
+```
+¡Hola {{FIRST_NAME}}! Su estimado de B&W Auto Repair para el {{VEHICLE_SHORT}}
+es ${{TOTAL}}. El desglose está en su correo. ¿Preguntas? 609.362.5476
+```
+
+**Keep the opt-out keyword as `STOP`, in English.** That is the keyword carriers
+actually process; a translated word will not register as an opt-out.
+
+**Spanish texts cost more segments.** A plain English SMS fits 160 characters per
+segment. The accented characters `á í ó ú` are not in the GSM-7 character set, so any
+message containing them switches to UCS-2 encoding, where a segment is **70 characters**.
+Both Spanish versions above will send as multiple segments. That is normal and delivers
+fine — just expect it on the bill, and do not strip the accents to save space, because
+unaccented Spanish reads as careless.
+
+---
+
+## 5. Filling the placeholders
 
 | Placeholder | Where it comes from | Example |
 |---|---|---|
@@ -104,6 +185,8 @@ directly. If you copy a shareable link out of QuickBooks by hand, drop it in pla
 | `{{WORK_SHORT}}` | Few-word version for SMS | `catalytic converters` |
 | `{{TOTAL}}` | Estimate total | `1,187.58` |
 | `{{EMAIL}}` | Customer email on the estimate | `svpatel5311@gmail.com` |
+| `{{WORK_SUMMARY_ES}}` | Spanish recap of the line items | `Reemplazar los dos convertidores catalíticos, delantero y trasero` |
+| `{{WORK_SHORT_ES}}` | Few-word Spanish version for SMS | `convertidores catalíticos` |
 
 Write `{{WORK_SUMMARY}}` in customer language, not shop language. The QuickBooks line
 items say "Upper catalytic converter replacement"; the summary should say what that
@@ -111,7 +194,7 @@ means for the car and why it matters.
 
 ---
 
-## 4. Customers with no email on file
+## 6. Customers with no email on file
 
 Four estimates currently have no email address, so the email template cannot reach them
 and the text template's "check your email" line does not apply:
