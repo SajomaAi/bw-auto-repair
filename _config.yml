@@ -1,0 +1,8 @@
+# GitHub Pages build config for bwautorepairllc.com
+#
+# `ops/` holds internal business documents — customer-facing templates, customer
+# names — that belong in version control but must never be served on the public
+# site. Excluding it here keeps it out of the built site while leaving it in the
+# repo. Anything else added under ops/ is covered automatically.
+exclude:
+  - ops
