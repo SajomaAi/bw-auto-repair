@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet &amp; Commercial Service | B&amp;W Auto Repair LLC | Monroe Township, NJ</title>
+    <meta name="description" content="Fleet and commercial vehicle service in Monroe Township, NJ. Diesel and medium-duty capable, in-house towing, welding and fabrication, body and paint. Serving school district, municipal, and service-van fleets across Middlesex and Mercer counties.">
+    <link rel="icon" type="image/png" href="images/bw-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fleet page only — scoped so nothing here can affect other pages */
+        .fleet-hero {
+            background: linear-gradient(rgba(10,10,10,.82), rgba(10,10,10,.94)), var(--dark-card);
+            padding: 150px 0 80px;
+            border-bottom: 1px solid var(--dark-border);
+        }
+        .fleet-hero .hero-tag { margin-bottom: 18px; }
+        .fleet-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(42px, 7vw, 76px);
+            font-weight: 800;
+            line-height: 1.02;
+            text-transform: uppercase;
+            color: var(--text-white);
+            margin-bottom: 20px;
+        }
+        .fleet-hero h1 .fleet-accent { color: var(--red); }
+        .fleet-hero p {
+            max-width: 62ch;
+            color: var(--text-gray-light);
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .fleet-proof {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 1px;
+            background: var(--dark-border);
+            border: 1px solid var(--dark-border);
+            margin-top: 54px;
+        }
+        .fleet-proof div { background: var(--dark-bg); padding: 22px 20px; }
+        .fleet-proof strong {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .fleet-proof span { font-size: 14px; color: var(--text-gray); }
+
+        .fleet-section { padding: 84px 0; }
+        .fleet-section.alt { background: var(--dark-card); }
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 44px;
+        }
+        .fleet-card {
+            background: var(--dark-bg);
+            border: 1px solid var(--dark-border);
+            border-top: 3px solid var(--red);
+            padding: 30px 28px;
+        }
+        .fleet-section.alt .fleet-card { background: var(--dark-bg); }
+        .fleet-card i { font-size: 26px; color: var(--red); margin-bottom: 16px; display: block; }
+        .fleet-card h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-white);
+            margin-bottom: 10px;
+        }
+        .fleet-card p { color: var(--text-gray); font-size: 15px; line-height: 1.7; margin: 0; }
+
+        .fleet-list { list-style: none; margin: 40px 0 0; padding: 0; }
+        .fleet-list li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--dark-border);
+            color: var(--text-gray-light);
+            font-size: 16px;
+        }
+        .fleet-list li:last-child { border-bottom: none; }
+        .fleet-list i { color: var(--red); margin-top: 5px; flex-shrink: 0; }
+        .fleet-list b { color: var(--text-white); font-weight: 600; }
+
+        .fleet-steps { counter-reset: fstep; margin-top: 44px; display: flex; flex-direction: column; gap: 1px; }
+        .fleet-step {
+            counter-increment: fstep;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            gap: 22px;
+            align-items: start;
+            background: var(--dark-bg);
+            border: 1px solid var(--dark-border);
+            padding: 26px 28px;
+        }
+        .fleet-step::before {
+            content: counter(fstep);
+            font-family: var(--font-heading);
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--red);
+            line-height: .85;
+        }
+        .fleet-step h3 {
+            font-family: var(--font-heading);
+            font-size: 23px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-white);
+            margin-bottom: 7px;
+        }
+        .fleet-step p { color: var(--text-gray); font-size: 15px; line-height: 1.7; margin: 0; }
+
+        .fleet-form-wrap { max-width: 760px; margin: 44px auto 0; }
+        .fleet-cta-line {
+            text-align: center;
+            margin-top: 34px;
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+        .fleet-cta-line a { color: var(--red); font-weight: 700; text-decoration: none; }
+        .fleet-cta-line a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            .fleet-hero { padding: 120px 0 60px; }
+            .fleet-step { grid-template-columns: 44px 1fr; gap: 16px; }
+            .fleet-step::before { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:6093625476" class="top-phone"><i class="fas fa-phone"></i> 609.362.5476</a>
+                <span class="top-divider">|</span>
+                <span class="top-address"><i class="fas fa-map-marker-alt"></i> 843 Route 33 West, Monroe Township, NJ 08831</span>
+            </div>
+            <div class="top-bar-right">
+                <span class="top-bilingual">Hablamos Español</span>
+                <button class="lang-btn" id="langToggle" onclick="toggleLang()">
+                    <i class="fas fa-globe"></i> <span id="langLabel">ES</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="images/bw-logo.png" alt="B&W Auto Repair Logo" class="nav-logo-img">
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name">B&amp;W AUTO REPAIR</span>
+                    <span class="nav-logo-sub">Monroe Township, NJ</span>
+                </div>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link" data-en="HOME" data-es="INICIO">HOME</a>
+                <a href="/#about" class="nav-link" data-en="ABOUT" data-es="NOSOTROS">ABOUT</a>
+                <a href="/#services" class="nav-link" data-en="SERVICES" data-es="SERVICIOS">SERVICES</a>
+                <a href="/fleet" class="nav-link active" data-en="FLEET" data-es="FLOTAS">FLEET</a>
+                <a href="/#contact" class="nav-link" data-en="CONTACT" data-es="CONTACTO">CONTACT</a>
+            </div>
+            <div class="nav-right">
+                <button class="nav-lang-btn" onclick="toggleLang()">
+                    <i class="fas fa-globe"></i> <span data-en="Español" data-es="English">Español</span>
+                </button>
+                <a href="tel:6093625476" class="nav-cta">
+                    <i class="fas fa-phone"></i> <span data-en="CALL NOW" data-es="LLAMAR">CALL NOW</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="fleet-hero">
+        <div class="container">
+            <div class="hero-tag" data-en="FLEET &amp; COMMERCIAL SERVICE" data-es="SERVICIO DE FLOTAS Y COMERCIAL">FLEET &amp; COMMERCIAL SERVICE</div>
+            <h1><span data-en="KEEP YOUR" data-es="MANTENGA SU">KEEP YOUR</span> <span class="fleet-accent" data-en="FLEET" data-es="SU FLOTA">FLEET</span> <span data-en="ON THE ROAD" data-es="EN LA CARRETERA">ON THE ROAD</span></h1>
+            <p data-en="A vehicle sitting in a lot is a vehicle costing you money. We service commercial fleets across Middlesex and Mercer counties — vans, pickups, box trucks, buses, and medium-duty equipment — with in-house towing so a breakdown on the road doesn't become a week off it."
+               data-es="Un vehículo parado en el lote es un vehículo que le cuesta dinero. Damos servicio a flotas comerciales en los condados de Middlesex y Mercer — camionetas, pickups, camiones de caja, autobuses y equipo de servicio mediano — con grúa propia para que una avería en la carretera no se convierta en una semana fuera de servicio.">A vehicle sitting in a lot is a vehicle costing you money. We service commercial fleets across Middlesex and Mercer counties — vans, pickups, box trucks, buses, and medium-duty equipment — with in-house towing so a breakdown on the road doesn't become a week off it.</p>
+            <div class="hero-actions">
+                <a href="#fleet-inquiry" class="btn btn-primary" data-en="REQUEST A FLEET REVIEW" data-es="SOLICITAR EVALUACIÓN DE FLOTA">REQUEST A FLEET REVIEW</a>
+                <a href="tel:6093625476" class="btn btn-outline-white"><i class="fas fa-phone"></i> 609.362.5476</a>
+            </div>
+
+            <div class="fleet-proof">
+                <div>
+                    <strong>15+</strong>
+                    <span data-en="Years serving Monroe Township" data-es="Años sirviendo a Monroe Township">Years serving Monroe Township</span>
+                </div>
+                <div>
+                    <strong data-en="School District" data-es="Distritos Escolares">School District</strong>
+                    <span data-en="Fleets under service today" data-es="Flotas en servicio actualmente">Fleets under service today</span>
+                </div>
+                <div>
+                    <strong data-en="In-House" data-es="Grúa Propia">In-House</strong>
+                    <span data-en="Towing and recovery" data-es="Remolque y recuperación">Towing and recovery</span>
+                </div>
+                <div>
+                    <strong data-en="Diesel" data-es="Diésel">Diesel</strong>
+                    <span data-en="And medium-duty capable" data-es="Y equipo de servicio mediano">And medium-duty capable</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why B&W -->
+    <section class="fleet-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag-inline"><span class="section-tag-line"></span><span data-en="WHY B&amp;W" data-es="POR QUÉ B&amp;W">WHY B&amp;W</span></div>
+                <h2 class="section-title" data-en="WORK MOST SHOPS TURN AWAY" data-es="TRABAJO QUE LA MAYORÍA RECHAZA">WORK MOST SHOPS TURN AWAY</h2>
+                <p class="section-subtitle" data-en="Fleet vehicles are not big cars. They need capabilities a general repair shop usually sends somewhere else."
+                   data-es="Los vehículos de flota no son carros grandes. Requieren capacidades que un taller general normalmente manda a otro lado.">Fleet vehicles are not big cars. They need capabilities a general repair shop usually sends somewhere else.</p>
+            </div>
+
+            <div class="fleet-grid">
+                <div class="fleet-card">
+                    <i class="fas fa-truck"></i>
+                    <h3 data-en="DIESEL &amp; MEDIUM-DUTY" data-es="DIÉSEL Y SERVICIO MEDIANO">DIESEL &amp; MEDIUM-DUTY</h3>
+                    <p data-en="Diesel service, and tires up to 19.5&quot; LT. Box trucks, buses, and heavy vans get worked on here instead of being sent out."
+                       data-es="Servicio diésel y llantas hasta 19.5&quot; LT. Camiones de caja, autobuses y camionetas pesadas se atienden aquí en vez de mandarse fuera.">Diesel service, and tires up to 19.5" LT. Box trucks, buses, and heavy vans get worked on here instead of being sent out.</p>
+                </div>
+                <div class="fleet-card">
+                    <i class="fas fa-truck-pickup"></i>
+                    <h3 data-en="TOWING &amp; RECOVERY" data-es="GRÚA Y RECUPERACIÓN">TOWING &amp; RECOVERY</h3>
+                    <p data-en="We recover the vehicle ourselves and bring it straight to our bay. One call, one company, no waiting on a third-party tow before the diagnosis even starts."
+                       data-es="Recuperamos el vehículo nosotros mismos y lo traemos directo a nuestro taller. Una llamada, una empresa, sin esperar a una grúa ajena antes de empezar el diagnóstico.">We recover the vehicle ourselves and bring it straight to our bay. One call, one company, no waiting on a third-party tow before the diagnosis even starts.</p>
+                </div>
+                <div class="fleet-card">
+                    <i class="fas fa-fire"></i>
+                    <h3 data-en="WELDING &amp; FABRICATION" data-es="SOLDADURA Y FABRICACIÓN">WELDING &amp; FABRICATION</h3>
+                    <p data-en="Frames, brackets, exhaust, and custom fabrication. Fleet vehicles break in ways a parts-swapper cannot fix — we make the part when there isn't one."
+                       data-es="Chasis, soportes, escape y fabricación a medida. Los vehículos de flota se dañan de formas que no se arreglan solo cambiando piezas — fabricamos la pieza cuando no existe.">Frames, brackets, exhaust, and custom fabrication. Fleet vehicles break in ways a parts-swapper cannot fix — we make the part when there isn't one.</p>
+                </div>
+                <div class="fleet-card">
+                    <i class="fas fa-spray-can-sparkles"></i>
+                    <h3 data-en="BODY &amp; PAINT" data-es="CARROCERÍA Y PINTURA">BODY &amp; PAINT</h3>
+                    <p data-en="Dents, rust, panel and roof repair, and refinishing. Vehicles carrying your name on the door should look like it."
+                       data-es="Golpes, óxido, reparación de paneles y techo, y pintura. Los vehículos que llevan su nombre en la puerta deben verse bien.">Dents, rust, panel and roof repair, and refinishing. Vehicles carrying your name on the door should look like it.</p>
+                </div>
+                <div class="fleet-card">
+                    <i class="fas fa-gears"></i>
+                    <h3 data-en="FULL MECHANICAL" data-es="MECÁNICA COMPLETA">FULL MECHANICAL</h3>
+                    <p data-en="Engine and transmission, brakes, suspension, electrical diagnostics, A/C, exhaust and emissions. The whole vehicle, one shop, one invoice."
+                       data-es="Motor y transmisión, frenos, suspensión, diagnóstico eléctrico, A/C, escape y emisiones. Todo el vehículo, un taller, una factura.">Engine and transmission, brakes, suspension, electrical diagnostics, A/C, exhaust and emissions. The whole vehicle, one shop, one invoice.</p>
+                </div>
+                <div class="fleet-card">
+                    <i class="fas fa-language"></i>
+                    <h3 data-en="BILINGUAL SHOP" data-es="TALLER BILINGÜE">BILINGUAL SHOP</h3>
+                    <p data-en="English and Spanish, in the office and in the bay. Your drivers explain the problem in their own words and nothing gets lost."
+                       data-es="Inglés y español, en la oficina y en el taller. Sus choferes explican el problema en sus propias palabras y nada se pierde.">English and Spanish, in the office and in the bay. Your drivers explain the problem in their own words and nothing gets lost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who we serve -->
+    <section class="fleet-section alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag-inline"><span class="section-tag-line"></span><span data-en="WHO WE SERVE" data-es="A QUIÉN SERVIMOS">WHO WE SERVE</span></div>
+                <h2 class="section-title" data-en="FLEETS WE ALREADY KNOW" data-es="FLOTAS QUE YA CONOCEMOS">FLEETS WE ALREADY KNOW</h2>
+            </div>
+            <ul class="fleet-list">
+                <li><i class="fas fa-check-circle"></i><span><b data-en="Public school districts" data-es="Distritos escolares públicos">Public school districts</b><span data-en=" — activity vans, buses, and maintenance vehicles, on district billing terms" data-es=" — vans escolares, autobuses y vehículos de mantenimiento, con facturación a crédito"> — activity vans, buses, and maintenance vehicles, on district billing terms</span></span></li>
+                <li><i class="fas fa-check-circle"></i><span><b data-en="Municipal and township fleets" data-es="Flotas municipales y del municipio">Municipal and township fleets</b><span data-en=" — DPW trucks and light equipment" data-es=" — camiones de obras públicas y equipo ligero"> — DPW trucks and light equipment</span></span></li>
+                <li><i class="fas fa-check-circle"></i><span><b data-en="Service-van businesses" data-es="Negocios con camionetas de servicio">Service-van businesses</b><span data-en=" — landscaping, HVAC, plumbing, pool service, pest control" data-es=" — jardinería, climatización, plomería, piscinas, control de plagas"> — landscaping, HVAC, plumbing, pool service, pest control</span></span></li>
+                <li><i class="fas fa-check-circle"></i><span><b data-en="Houses of worship" data-es="Iglesias y templos">Houses of worship</b><span data-en=" — congregation vans and buses" data-es=" — vans y autobuses de la congregación"> — congregation vans and buses</span></span></li>
+                <li><i class="fas fa-check-circle"></i><span><b data-en="Trucking and delivery contractors" data-es="Contratistas de transporte y entregas">Trucking and delivery contractors</b><span data-en=" — box trucks and straight trucks" data-es=" — camiones de caja y camiones rígidos"> — box trucks and straight trucks</span></span></li>
+                <li><i class="fas fa-check-circle"></i><span><b data-en="Auto dealers" data-es="Concesionarios de autos">Auto dealers</b><span data-en=" — sublet mechanical, body, and paint work" data-es=" — trabajo mecánico, de carrocería y pintura subcontratado"> — sublet mechanical, body, and paint work</span></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="fleet-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag-inline"><span class="section-tag-line"></span><span data-en="HOW IT WORKS" data-es="CÓMO FUNCIONA">HOW IT WORKS</span></div>
+                <h2 class="section-title" data-en="SETTING UP A FLEET ACCOUNT" data-es="ABRIR UNA CUENTA DE FLOTA">SETTING UP A FLEET ACCOUNT</h2>
+            </div>
+            <div class="fleet-steps">
+                <div class="fleet-step">
+                    <div>
+                        <h3 data-en="WE LOOK AT YOUR VEHICLES" data-es="REVISAMOS SUS VEHÍCULOS">WE LOOK AT YOUR VEHICLES</h3>
+                        <p data-en="Bring one in, or we come to you. No charge, no obligation — we tell you what we see and what it would cost."
+                           data-es="Traiga uno, o vamos nosotros. Sin costo ni compromiso — le decimos qué vemos y cuánto costaría.">Bring one in, or we come to you. No charge, no obligation — we tell you what we see and what it would cost.</p>
+                    </div>
+                </div>
+                <div class="fleet-step">
+                    <div>
+                        <h3 data-en="WRITTEN ESTIMATE FIRST" data-es="PRESUPUESTO POR ESCRITO PRIMERO">WRITTEN ESTIMATE FIRST</h3>
+                        <p data-en="Parts and labor, line by line, before anything is ordered. If we open a vehicle and find something we couldn't see, we stop and call you."
+                           data-es="Piezas y mano de obra, línea por línea, antes de pedir nada. Si abrimos un vehículo y encontramos algo que no se veía, paramos y le llamamos.">Parts and labor, line by line, before anything is ordered. If we open a vehicle and find something we couldn't see, we stop and call you.</p>
+                    </div>
+                </div>
+                <div class="fleet-step">
+                    <div>
+                        <h3 data-en="PRIORITY SCHEDULING" data-es="PROGRAMACIÓN PRIORITARIA">PRIORITY SCHEDULING</h3>
+                        <p data-en="Fleet vehicles get scheduled ahead of walk-in work, because your downtime costs more than ours."
+                           data-es="Los vehículos de flota se programan antes que el trabajo de mostrador, porque su tiempo parado cuesta más que el nuestro.">Fleet vehicles get scheduled ahead of walk-in work, because your downtime costs more than ours.</p>
+                    </div>
+                </div>
+                <div class="fleet-step">
+                    <div>
+                        <h3 data-en="ONE MONTHLY INVOICE" data-es="UNA FACTURA MENSUAL">ONE MONTHLY INVOICE</h3>
+                        <p data-en="Billing on terms, itemized by vehicle, so your accounting department gets one document instead of a stack of receipts."
+                           data-es="Facturación a crédito, detallada por vehículo, para que su departamento de contabilidad reciba un solo documento en vez de un montón de recibos.">Billing on terms, itemized by vehicle, so your accounting department gets one document instead of a stack of receipts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry -->
+    <section class="fleet-section alt" id="fleet-inquiry">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag-inline"><span class="section-tag-line"></span><span data-en="GET STARTED" data-es="EMPEZAR">GET STARTED</span></div>
+                <h2 class="section-title" data-en="REQUEST A FLEET REVIEW" data-es="SOLICITAR EVALUACIÓN DE FLOTA">REQUEST A FLEET REVIEW</h2>
+                <p class="section-subtitle" data-en="Tell us what you run. We'll call you back within one business day."
+                   data-es="Díganos qué vehículos maneja. Le devolvemos la llamada en un día hábil.">Tell us what you run. We'll call you back within one business day.</p>
+            </div>
+
+            <div class="fleet-form-wrap">
+                <form class="appointment-form" id="fleetForm" onsubmit="handleAppointment(event)">
+                    <input type="hidden" name="access_key" value="57cab8ef-de49-4219-9218-ee6257ebc8f6">
+                    <input type="hidden" name="subject" value="New Fleet Inquiry — B&W Auto Repair">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fleetCompany" data-en="Company / Organization" data-es="Empresa / Organización">Company / Organization</label>
+                            <input type="text" id="fleetCompany" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fleetName" data-en="Contact Name" data-es="Nombre de Contacto">Contact Name</label>
+                            <input type="text" id="fleetName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fleetPhone" data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+                            <input type="tel" id="fleetPhone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fleetEmail" data-en="Email" data-es="Correo Electrónico">Email</label>
+                            <input type="email" id="fleetEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fleetSize" data-en="Number of Vehicles" data-es="Número de Vehículos">Number of Vehicles</label>
+                            <select id="fleetSize" name="fleet_size" required>
+                                <option value="" data-en="Select a range" data-es="Seleccione un rango">Select a range</option>
+                                <option value="1-3" >1 – 3</option>
+                                <option value="4-10">4 – 10</option>
+                                <option value="11-25">11 – 25</option>
+                                <option value="26+">26+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fleetType" data-en="Type of Vehicles" data-es="Tipo de Vehículos">Type of Vehicles</label>
+                            <select id="fleetType" name="fleet_type" required>
+                                <option value="" data-en="Select a type" data-es="Seleccione un tipo">Select a type</option>
+                                <option value="Vans and pickups" data-en="Vans and pickups" data-es="Camionetas y pickups">Vans and pickups</option>
+                                <option value="Box trucks" data-en="Box trucks" data-es="Camiones de caja">Box trucks</option>
+                                <option value="Buses and activity vans" data-en="Buses and activity vans" data-es="Autobuses y vans escolares">Buses and activity vans</option>
+                                <option value="Mixed fleet" data-en="Mixed fleet" data-es="Flota mixta">Mixed fleet</option>
+                                <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="fleetNotes" data-en="What do you need help with?" data-es="¿En qué necesita ayuda?">What do you need help with?</label>
+                            <textarea id="fleetNotes" name="notes" rows="4"
+                                data-en="Routine maintenance, a vehicle that's down, an ongoing problem — whatever's on your mind."
+                                data-es="Mantenimiento de rutina, un vehículo parado, un problema que no se resuelve — lo que tenga en mente."
+                                placeholder="Routine maintenance, a vehicle that's down, an ongoing problem — whatever's on your mind."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit btn-full" data-en="REQUEST FLEET REVIEW" data-es="SOLICITAR EVALUACIÓN">REQUEST FLEET REVIEW</button>
+                    <div class="form-success" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-en="Thank you — we'll be in touch within one business day." data-es="Gracias — nos comunicaremos con usted en un día hábil.">Thank you — we'll be in touch within one business day.</span>
+                    </div>
+                    <div class="form-error" style="display:none;">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span data-en="Something went wrong. Please call us at 609-362-5476." data-es="Algo salió mal. Por favor llámenos al 609-362-5476.">Something went wrong. Please call us at 609-362-5476.</span>
+                    </div>
+                </form>
+
+                <p class="fleet-cta-line"><span data-en="Prefer to talk it through? Call" data-es="¿Prefiere hablarlo? Llame al">Prefer to talk it through? Call</span> <a href="tel:6093625476">609.362.5476</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/bw-logo.png" alt="B&W Auto Repair Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">
+                        <span class="footer-logo-name">B&amp;W AUTO REPAIR</span>
+                        <span class="footer-logo-tagline">LLC</span>
+                    </div>
+                </div>
+                <p data-en="Professional Auto Repair in Monroe Township, NJ" data-es="Reparación Automotriz Profesional en Monroe Township, NJ">Professional Auto Repair in Monroe Township, NJ</p>
+                <p class="footer-bilingual">HABLAMOS ESPAÑOL</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-en="QUICK LINKS" data-es="ENLACES RÁPIDOS">QUICK LINKS</h4>
+                <div class="footer-divider"></div>
+                <a href="/" data-en="Home" data-es="Inicio">Home</a>
+                <a href="/#about" data-en="About" data-es="Nosotros">About</a>
+                <a href="/#services" data-en="Services" data-es="Servicios">Services</a>
+                <a href="/fleet" data-en="Fleet &amp; Commercial" data-es="Flotas y Comercial">Fleet &amp; Commercial</a>
+                <a href="/#contact" data-en="Contact" data-es="Contacto">Contact</a>
+                <a href="/privacy-policy" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+                <a href="/sms-consent" data-en="SMS Terms" data-es="Términos de SMS">SMS Terms</a>
+                <a href="/terms-of-service" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+            </div>
+            <div class="footer-contact">
+                <h4 data-en="CONTACT INFO" data-es="INFORMACIÓN DE CONTACTO">CONTACT INFO</h4>
+                <div class="footer-divider"></div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:6093625476">609.362.5476</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:bw_autorepair@hotmail.com">bw_autorepair@hotmail.com</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>843 Route 33 West<br>Monroe Township, NJ 08831</span>
+                </div>
+            </div>
+            <div class="footer-hours">
+                <h4 data-en="BUSINESS HOURS" data-es="HORARIO DE ATENCIÓN">BUSINESS HOURS</h4>
+                <div class="footer-divider"></div>
+                <div class="hours-row">
+                    <span><i class="fas fa-clock"></i> <span data-en="Monday – Friday" data-es="Lunes – Viernes">Monday – Friday</span></span>
+                    <span>8am – 6pm</span>
+                </div>
+                <div class="hours-row">
+                    <span><i class="fas fa-clock"></i> <span data-en="Saturday" data-es="Sábado">Saturday</span></span>
+                    <span>8am – 4pm</span>
+                </div>
+                <div class="hours-row closed">
+                    <span><i class="fas fa-clock"></i> <span data-en="Sunday" data-es="Domingo">Sunday</span></span>
+                    <span data-en="Closed" data-es="Cerrado">Closed</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 B&W Auto Repair. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>
