@@ -170,9 +170,12 @@ page link, then ask for the vehicle: *"Here's the overview — bwautorepairllc.c
 The fastest way to see if we're a fit is one vehicle. What's giving you the most trouble
 right now?"*
 
-**"What are your rates?"** Answer plainly. Labor is $125/hr. Don't discount to win a fleet —
-you'll be servicing these vehicles for years and you cannot raise it later. Compete on
-downtime and capability.
+**"What are your rates?"** Answer plainly, and quote the *commercial* rate — a fleet manager
+expects a dedicated rate below retail and will think less of you if you don't have one. What
+you must not do is discount off a rate that is already below market. See
+`ops/labor-rate-research.md`: at $125/hr B&W is under the New Jersey average of $140–170, so
+there is nothing left to give. Set retail at $145–155 first, hold commercial at $125–135, and
+quote diesel and medium-duty higher. Then compete on downtime and capability, not price.
 
 **"We're happy with who we use."** Ask one question: *"Understood. Do they handle your
 diesel and medium-duty in-house, or send it out?"* If the answer is "send it out," you have
