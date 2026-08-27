@@ -220,48 +220,27 @@
     });
   };
 
-  window.handlePayment = function (e) {
-    e.preventDefault();
-    var form = e.target;
-    setFormState(form, 'loading');
+  /* --- QuickBooks payment link ---------------------------------------
+     Paste your QuickBooks payment link between the quotes below and the
+     "Pay Now" button on the invoice section goes live. Get one from
+     QuickBooks: Sales > Payment links > create a link, then copy the URL.
 
-    // Build a safe payload — exclude raw card number and CVV for security
-    var formData = new FormData(form);
-    var safeData = new FormData();
-    var safeFields = ['access_key', 'subject', 'from_name', 'redirect',
-                      'amount', 'invoice', 'cardName', 'zip', 'payPhone', 'payEmail'];
-    safeFields.forEach(function (f) {
-      if (formData.has(f)) safeData.append(f, formData.get(f));
-    });
-    // Add a masked card reference for reference
-    var rawCard = (formData.get('cardNumber') || '').replace(/\s/g, '');
-    if (rawCard.length >= 4) {
-      safeData.append('card_last4', '**** **** **** ' + rawCard.slice(-4));
-    }
-    safeData.append('expiry', formData.get('expiry') || '');
+     Leave it empty and the page shows the "request a payment link" form
+     instead, which emails the shop so a link can be sent per invoice.
 
-    fetch(W3F_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: safeData
-    })
-    .then(function (res) { return res.json(); })
-    .then(function (json) {
-      if (json.success) {
-        setFormState(form, 'success');
-        form.reset();
-        setTimeout(function () { setFormState(form, 'reset'); }, 6000);
-      } else {
-        console.error('Web3Forms error:', json);
-        setFormState(form, 'error');
-        setTimeout(function () { setFormState(form, 'reset'); }, 6000);
-      }
-    })
-    .catch(function (err) {
-      console.error('Network error:', err);
-      setFormState(form, 'error');
-      setTimeout(function () { setFormState(form, 'reset'); }, 6000);
-    });
-  };
+     Card details are never collected on this site. Payment happens on
+     QuickBooks' own hosted page, which is what keeps us out of scope for
+     handling card data at all.                                          */
+  var QBO_PAYMENT_LINK = '';
+
+  (function initPaymentLink() {
+    if (!QBO_PAYMENT_LINK) return;
+    var direct = document.getElementById('payDirect');
+    var btn    = document.getElementById('payNowBtn');
+    var request= document.getElementById('payRequestBlock');
+    if (btn)     btn.setAttribute('href', QBO_PAYMENT_LINK);
+    if (direct)  direct.style.display = '';
+    if (request) request.classList.add('pay-secondary');
+  })();
 
 })();

@@ -333,79 +333,78 @@
                     <span class="tag-line"></span>
                 </div>
                 <h2 class="section-title" data-en="PAY YOUR INVOICE" data-es="PAGUE SU FACTURA">PAY YOUR INVOICE</h2>
-                <p class="section-subtitle" data-en="Convenient online payment for your auto repair services" data-es="Pago en línea conveniente para sus servicios de reparación automotriz">Convenient online payment for your auto repair services</p>
+                <p class="section-subtitle" data-en="Pay by card or bank transfer on our secure QuickBooks payment page." data-es="Pague con tarjeta o transferencia bancaria en nuestra página de pago segura de QuickBooks.">Pay by card or bank transfer on our secure QuickBooks payment page.</p>
             </div>
-            <form class="payment-form" id="paymentForm" onsubmit="handlePayment(event)">
-                <!-- Web3Forms -->
-                <input type="hidden" name="access_key" value="57cab8ef-de49-4219-9218-ee6257ebc8f6">
-                <input type="hidden" name="subject" value="New Payment Notification — B&W Auto Repair">
-                <input type="hidden" name="from_name" value="B&W Auto Repair Website">
-                <input type="hidden" name="redirect" value="false">
-                <div class="payment-secure">
-                    <i class="fas fa-shield-halved"></i>
-                    <div>
-                        <strong data-en="Secure Payment" data-es="Pago Seguro">Secure Payment</strong>
-                        <span data-en="Your payment information is encrypted and secure." data-es="Su información de pago está encriptada y segura.">Your payment information is encrypted and secure.</span>
-                    </div>
-                </div>
-                <div class="form-grid">
-                    <div class="form-group full-width">
-                        <label data-en="Invoice Amount ($)" data-es="Monto de Factura ($)">Invoice Amount ($)</label>
-                        <div class="input-prefix">
-                            <span>$</span>
-                            <input type="number" name="amount" step="0.01" min="0" placeholder="0.00" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Invoice Number" data-es="Número de Factura">Invoice Number</label>
-                        <input type="text" name="invoice" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Name on Card" data-es="Nombre en la Tarjeta">Name on Card</label>
-                        <input type="text" name="cardName" required>
-                    </div>
-                    <div class="form-group full-width">
-                        <label data-en="Card Number" data-es="Número de Tarjeta">Card Number</label>
-                        <div class="input-icon">
-                            <i class="fas fa-lock"></i>
-                            <input type="text" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>MM/YY</label>
-                        <input type="text" name="expiry" placeholder="MM/YY" maxlength="5" required>
-                    </div>
-                    <div class="form-group">
-                        <label>CVV</label>
-                        <input type="text" name="cvv" placeholder="123" maxlength="4" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Zip Code" data-es="Código Postal">Zip Code</label>
-                        <input type="text" name="zip" placeholder="08831" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
-                        <input type="tel" name="payPhone">
-                    </div>
-                    <div class="form-group">
-                        <label data-en="Email Address" data-es="Correo Electrónico">Email Address</label>
-                        <input type="email" name="payEmail">
-                    </div>
-                </div>
-                <div class="form-success" id="paymentSuccess" style="display:none;">
-                    <i class="fas fa-check-circle"></i>
-                    <span data-en="Payment notification sent! We'll process your payment and confirm shortly." data-es="¡Notificación enviada! Procesaremos su pago y confirmaremos pronto.">Payment notification sent! We'll process your payment and confirm shortly.</span>
-                </div>
-                <div class="form-error" id="paymentError" style="display:none;">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <span data-en="Something went wrong. Please call us at 609-362-5476." data-es="Algo salió mal. Por favor llámenos al 609-362-5476.">Something went wrong. Please call us at 609-362-5476.</span>
-                </div>
-                <button type="submit" class="btn btn-primary btn-submit btn-full">
+
+            <!-- Direct payment. Hidden until QBO_PAYMENT_LINK is set in script.js -->
+            <div class="pay-direct" id="payDirect" style="display:none;">
+                <i class="fas fa-lock"></i>
+                <h3 data-en="Pay online now" data-es="Pague en línea ahora">Pay online now</h3>
+                <p data-en="Card or bank transfer. You'll be taken to our secure QuickBooks payment page — your card details go straight to QuickBooks and are never entered on or stored by this website."
+                   data-es="Tarjeta o transferencia bancaria. Será dirigido a nuestra página de pago segura de QuickBooks — los datos de su tarjeta van directamente a QuickBooks y nunca se ingresan ni se guardan en este sitio web.">Card or bank transfer. You'll be taken to our secure QuickBooks payment page — your card details go straight to QuickBooks and are never entered on or stored by this website.</p>
+                <a href="#" id="payNowBtn" class="btn btn-primary btn-full" target="_blank" rel="noopener">
                     <i class="fas fa-credit-card"></i>
-                    <span data-en="SUBMIT PAYMENT" data-es="ENVIAR PAGO">SUBMIT PAYMENT</span>
-                </button>
-                <p class="payment-alt" data-en="Prefer to pay by phone? Call us at" data-es="¿Prefiere pagar por teléfono? Llámenos al">Prefer to pay by phone? Call us at <a href="tel:6093625476">609.362.5476</a></p>
-            </form>
+                    <span data-en="PAY NOW" data-es="PAGAR AHORA">PAY NOW</span>
+                </a>
+            </div>
+
+            <div class="payment-secure">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <strong data-en="Already have your invoice by email?" data-es="¿Ya tiene su factura por correo?">Already have your invoice by email?</strong>
+                    <span data-en="Use the Pay Now button in that email. It's tied to your invoice, so your account is credited automatically."
+                          data-es="Use el botón Pagar de ese correo. Está vinculado a su factura, así que su cuenta se acredita automáticamente.">Use the Pay Now button in that email. It's tied to your invoice, so your account is credited automatically.</span>
+                </div>
+            </div>
+
+            <div id="payRequestBlock">
+                <form class="payment-form" id="paymentRequestForm" onsubmit="handleAppointment(event)">
+                    <!-- Web3Forms — sends a request to the shop. No card details are collected. -->
+                    <input type="hidden" name="access_key" value="57cab8ef-de49-4219-9218-ee6257ebc8f6">
+                    <input type="hidden" name="subject" value="Payment Link Request — B&W Auto Repair">
+                    <input type="hidden" name="from_name" value="B&W Auto Repair Website">
+                    <input type="hidden" name="redirect" value="false">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="payName" data-en="Your Name" data-es="Su Nombre">Your Name</label>
+                            <input type="text" id="payName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="payInvoice" data-en="Invoice Number" data-es="Número de Factura">Invoice Number</label>
+                            <input type="text" id="payInvoice" name="invoice" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="payAmount" data-en="Invoice Amount ($)" data-es="Monto de Factura ($)">Invoice Amount ($)</label>
+                            <div class="input-prefix">
+                                <span>$</span>
+                                <input type="number" id="payAmount" name="amount" step="0.01" min="0" placeholder="0.00" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="payEmail" data-en="Email Address" data-es="Correo Electrónico">Email Address</label>
+                            <input type="email" id="payEmail" name="payEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="payPhone" data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+                            <input type="tel" id="payPhone" name="payPhone">
+                        </div>
+                    </div>
+                    <div class="form-success" id="paymentSuccess" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-en="Request received. We'll send you a secure payment link — usually within one business hour."
+                              data-es="Solicitud recibida. Le enviaremos un enlace de pago seguro — normalmente en una hora hábil.">Request received. We'll send you a secure payment link — usually within one business hour.</span>
+                    </div>
+                    <div class="form-error" id="paymentError" style="display:none;">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span data-en="Something went wrong. Please call us at 609-362-5476." data-es="Algo salió mal. Por favor llámenos al 609-362-5476.">Something went wrong. Please call us at 609-362-5476.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-en="REQUEST PAYMENT LINK" data-es="SOLICITAR ENLACE DE PAGO">REQUEST PAYMENT LINK</span>
+                    </button>
+                    <p class="payment-alt"><span data-en="Prefer to pay by phone? Call us at" data-es="¿Prefiere pagar por teléfono? Llámenos al">Prefer to pay by phone? Call us at</span> <a href="tel:6093625476">609.362.5476</a></p>
+                </form>
+            </div>
         </div>
     </section>
 
