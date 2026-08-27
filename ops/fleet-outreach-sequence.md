@@ -13,11 +13,14 @@ new `service@bwautorepairllc.com` once the domain is set up.
 
 ## Before you send anything
 
-**1. Get permission to name your references.** The single strongest sentence available to
-you is naming the school districts you already serve. It is also not yours to use without
-asking. Call your contacts at each district and ask: *"Would you be comfortable if we
-mentioned that we service your vehicles when we talk to other districts?"* Most say yes.
-Until they do, the emails below use the unnamed version, which is weaker but honest.
+**1. References stay anonymous.** The emails below say *"two public school districts in
+central New Jersey"* rather than naming anyone. That is accurate, it is verifiable if someone
+asks, and it costs you nothing to send today.
+
+There is a stronger version — naming the districts — but a customer's name is theirs to give,
+not yours to use. If you ever want it, it is two phone calls: *"Would you be comfortable if we
+mentioned that we service your vehicles when we talk to other districts?"* Most say yes. Until
+then, send the anonymous version as written; it works.
 
 **2. Build the list by hand, not by scraping.** Fleet outreach lives or dies on reaching the
 right title. For each target you want: organization, contact name, title, email, phone.
@@ -71,15 +74,17 @@ B&W Auto Repair LLC
 609.362.5476 | bwautorepairllc.com/fleet
 ```
 
-**With permission to name references, replace the first paragraph with:**
+**Stronger opener, still anonymous** — use this when the recipient is a school district:
 
 ```
-I own B&W Auto Repair in Monroe Township. We service the vehicle fleets for
-{{DISTRICT_A}} and {{DISTRICT_B}}, and I'm reaching out because we have
-capacity for another account this year.
+I own B&W Auto Repair in Monroe Township. We already service the vehicle fleets
+for two public school districts in central New Jersey, and I'm reaching out
+because we have capacity for another account this year.
 ```
 
-That version is roughly twice as strong. It is worth the two phone calls to earn it.
+Note the second sentence does real work: *capacity for another account* says you are
+selective and currently busy, which is both true and the opposite of how a struggling shop
+sounds.
 
 ---
 
@@ -208,5 +213,5 @@ Touch 4 · Replied · Outcome · Next action date`
 
 **What good looks like on a researched list of 50:** a handful of replies, one or two
 vehicle reviews booked, and one account opened. One school district is worth roughly
-$20,000 a year based on what Montgomery Township BOE has spent. That is the math that makes
+$20,000 a year based on what your largest district account has spent. That is the math that makes
 this worth the hours.
