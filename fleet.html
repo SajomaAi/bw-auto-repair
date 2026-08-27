@@ -125,6 +125,53 @@
         }
         .fleet-step p { color: var(--text-gray); font-size: 15px; line-height: 1.7; margin: 0; }
 
+        .fleet-rates { max-width: 780px; margin: 44px auto 0; }
+        .fleet-rates table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--dark-bg);
+            border: 1px solid var(--dark-border);
+        }
+        .fleet-rates th {
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--text-gray);
+            text-align: left;
+            padding: 14px 22px;
+            background: var(--dark-card);
+            border-bottom: 1px solid var(--dark-border);
+        }
+        .fleet-rates td {
+            padding: 15px 22px;
+            border-bottom: 1px solid var(--dark-border);
+            color: var(--text-gray-light);
+            font-size: 16px;
+        }
+        .fleet-rates tr:last-child td { border-bottom: none; }
+        .fleet-rates td.pct {
+            text-align: right;
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--red);
+            white-space: nowrap;
+        }
+        .fleet-terms { list-style: none; margin: 30px 0 0; padding: 0; display: grid; gap: 1px; }
+        .fleet-terms li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: var(--dark-bg);
+            border: 1px solid var(--dark-border);
+            padding: 20px 22px;
+        }
+        .fleet-terms i { color: var(--red); margin-top: 4px; flex-shrink: 0; }
+        .fleet-terms b { display: block; color: var(--text-white); font-weight: 600; margin-bottom: 3px; }
+        .fleet-terms span { color: var(--text-gray); font-size: 15px; line-height: 1.65; }
+
         .fleet-form-wrap { max-width: 760px; margin: 44px auto 0; }
         .fleet-cta-line {
             text-align: center;
@@ -336,8 +383,56 @@
         </div>
     </section>
 
+    <!-- Commercial rates & terms -->
+    <section class="fleet-section alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag-inline"><span class="section-tag-line"></span><span data-en="RATES &amp; TERMS" data-es="TARIFAS Y CONDICIONES">RATES &amp; TERMS</span></div>
+                <h2 class="section-title" data-en="A COMMERCIAL RATE, NOT A NEGOTIATION" data-es="UNA TARIFA COMERCIAL, NO UNA NEGOCIACIÓN">A COMMERCIAL RATE, NOT A NEGOTIATION</h2>
+                <p class="section-subtitle" data-en="Fleet accounts get a dedicated hourly rate below our retail rate — the same rate every visit, on every vehicle. No haggling job by job, and no surprise pricing when a bill arrives."
+                   data-es="Las cuentas de flota reciben una tarifa por hora dedicada, por debajo de nuestra tarifa al público — la misma tarifa en cada visita y en cada vehículo. Sin negociar trabajo por trabajo y sin sorpresas al recibir la factura.">Fleet accounts get a dedicated hourly rate below our retail rate — the same rate every visit, on every vehicle. No haggling job by job, and no surprise pricing when a bill arrives.</p>
+            </div>
+
+            <div class="fleet-rates">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-en="Vehicles in your fleet" data-es="Vehículos en su flota">Vehicles in your fleet</th>
+                            <th style="text-align:right;" data-en="Off our retail labor rate" data-es="Descuento sobre la tarifa al público">Off our retail labor rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-en="5 – 10" data-es="5 – 10">5 – 10</td><td class="pct">5%</td></tr>
+                        <tr><td data-en="11 – 25" data-es="11 – 25">11 – 25</td><td class="pct">10%</td></tr>
+                        <tr><td data-en="26 – 50" data-es="26 – 50">26 – 50</td><td class="pct">15%</td></tr>
+                        <tr><td data-en="51 or more" data-es="51 o más">51 or more</td><td class="pct">20%</td></tr>
+                    </tbody>
+                </table>
+
+                <ul class="fleet-terms">
+                    <li>
+                        <i class="fas fa-truck"></i>
+                        <span><b data-en="Diesel and medium-duty priced separately" data-es="Diésel y servicio mediano con tarifa aparte">Diesel and medium-duty priced separately</b><span data-en="Specialised work carries its own rate — still below what a truck dealer charges, and without sending your vehicle out to a third shop." data-es="El trabajo especializado tiene su propia tarifa — aún por debajo de lo que cobra un concesionario de camiones, y sin mandar su vehículo a un tercer taller.">Specialised work carries its own rate — still below what a truck dealer charges, and without sending your vehicle out to a third shop.</span></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <span><b data-en="Net 30 billing" data-es="Facturación a 30 días">Net 30 billing</b><span data-en="One itemized monthly invoice, broken out by vehicle, so your accounting department gets a single document instead of a stack of receipts." data-es="Una factura mensual detallada, desglosada por vehículo, para que su departamento de contabilidad reciba un solo documento en vez de un montón de recibos.">One itemized monthly invoice, broken out by vehicle, so your accounting department gets a single document instead of a stack of receipts.</span></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-signature"></i>
+                        <span><b data-en="Written estimate before any work" data-es="Presupuesto por escrito antes de cualquier trabajo">Written estimate before any work</b><span data-en="Parts and labor, line by line, approved by you before a part is ordered. If we find something we couldn't see, we stop and call." data-es="Piezas y mano de obra, línea por línea, aprobado por usted antes de pedir una pieza. Si encontramos algo que no se veía, paramos y llamamos.">Parts and labor, line by line, approved by you before a part is ordered. If we find something we couldn't see, we stop and call.</span></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-handshake"></i>
+                        <span><b data-en="Larger fleets, let's talk" data-es="Flotas más grandes, hablemos">Larger fleets, let's talk</b><span data-en="Beyond these tiers we'll look at a rate against a committed monthly volume or a multi-year agreement. Tell us what you run and we'll put a number on it." data-es="Más allá de estos niveles, evaluamos una tarifa a cambio de un volumen mensual comprometido o un acuerdo de varios años. Díganos qué maneja y le damos un número.">Beyond these tiers we'll look at a rate against a committed monthly volume or a multi-year agreement. Tell us what you run and we'll put a number on it.</span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Inquiry -->
-    <section class="fleet-section alt" id="fleet-inquiry">
+    <section class="fleet-section" id="fleet-inquiry">
         <div class="container">
             <div class="section-header">
                 <div class="section-tag-inline"><span class="section-tag-line"></span><span data-en="GET STARTED" data-es="EMPEZAR">GET STARTED</span></div>

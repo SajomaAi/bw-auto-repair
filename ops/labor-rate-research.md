@@ -68,31 +68,48 @@ That means:
 
 ---
 
-## 4. Recommended structure
+## 4. Decided rates
 
-**Step 1 — raise the retail rate to $145–155.**
+Confirmed August 2026. These are the numbers to quote; they are **not** published on the
+website — `fleet.html` shows the discount tiers only, so competitors cannot read the rate
+card off a public page.
+
+| | Rate per hour |
+|---|---|
+| Retail | **$150** |
+| Fleet / commercial | **$130** |
+| Diesel & medium-duty | **$160** |
+
+Existing fleet customers move from $125 to $130 — a $5 change on a rate that has not moved in
+years, and one that comes with a written tier structure they did not have before.
+
+---
+
+## 5. Why this structure
+
+**Retail at $150.**
 Mid-range for New Jersey, still comfortably under the dealers. This is the move that
 matters; everything else follows from it.
 
-**Step 2 — set the commercial rate at $125–135.**
-Today's rate becomes the fleet rate. Fleet accounts receive a real, defensible discount off
-a real retail number, and B&W stops selling retail work at fleet pricing. Existing fleet
-customers see no increase at the bottom of that band, which makes this the least disruptive
-version of a price rise.
+**Commercial at $130.**
+Roughly today's rate becomes the fleet rate. Fleet accounts receive a real, defensible
+discount off a real retail number, and B&W stops selling retail work at fleet pricing.
+Existing fleet customers absorb $5, not $25 — which is what makes this a price rise you can
+actually deliver without losing an account.
 
-**Step 3 — price diesel and medium-duty separately, at $150–165.**
+**Diesel and medium-duty at $160.**
 This work is genuinely scarcer, the market pays more for it (median $149 nationally and
 climbing 7%+ a year), and B&W is one of the few independents in the area that will take it.
 Charging light-duty auto rates for medium-duty truck work is the single clearest place money
 is being left behind.
 
-**Step 4 — make discounts buy something.**
+**Discounts must buy something.**
 Below the commercial rate, ask for a volume commitment or a term. A discount given for
 nothing is just a lower price.
 
 ---
 
-## 5. Two guardrails from the research
+## 6. Two guardrails from the research
 
 **Keep the effective rate within 10% of posted.** Effective labor rate is what you actually
 collect per billed hour after discounts, comebacks, and unbilled diagnostic time. Industry
@@ -107,7 +124,7 @@ matters as much as rate discipline.
 
 ---
 
-## 6. What this corrects
+## 7. What this corrects
 
 An earlier draft of `ops/fleet-outreach-sequence.md` advised *"Don't discount to win a
 fleet."* That was too absolute. A commercial rate is normal and a fleet manager will expect
